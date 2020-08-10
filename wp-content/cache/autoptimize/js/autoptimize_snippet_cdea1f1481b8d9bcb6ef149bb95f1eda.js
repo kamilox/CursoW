@@ -1,0 +1,1 @@
+$=jQuery.noConflict();$(document).ready(function(){localStorage.removeItem('age');});

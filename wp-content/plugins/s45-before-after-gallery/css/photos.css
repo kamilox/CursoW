@@ -1,0 +1,824 @@
+/* Patient Listing Styles (gallery listings) */
+.photo-gallery {margin: 0px auto;text-align: center;}
+.row.treatments {
+    margin: 0;
+}
+.treatments-single {
+    border: 1px solid #c8c8c8;
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: top;
+    width: 30%;
+    margin-bottom: 50px;
+    min-height: 430px;
+}
+.treatments-single .category-list h3 {
+    font-size: 20px;
+    color: #617ba8;
+	font-weight: bold;
+	font-family: 'open_sanssemibold';
+}
+.treatments-single .category-list ul li a {
+	text-decoration: none;
+	color: #6e757f;
+	font-size: 15px;
+    font-weight: normal;
+}
+.treatments-single .category-list ul li a:hover {
+    color: #303030;
+	text-decoration: none;
+}
+.gallery-content h1 {
+    font-size: 30px;
+    color: #617ba8;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-bottom: 31px;
+	font-family: open_sansregular;
+}
+div.treatments-single:nth-child(3), div.treatments-single:nth-child(6){
+	margin-right: 0px;
+}
+.text-center {
+    text-align: left;
+}
+.category-list {
+    padding: 0 20px;
+}
+.category-list ul {
+    list-style: none;min-height: 200px;
+}
+.category-list ul li {
+    border-bottom: 1px solid rgba(229,229,229,1.00);
+    font-family: 'open_sanssemibold';
+    font-size: 16px;
+    line-height: 34px;
+}
+.category-list ul li:last-child {
+    border: 0;
+}
+#patient-listing{padding: 0 15px;}
+.patient-list-image {
+	margin:5px;
+}
+
+.patient-single { 
+	float: left;
+	text-align: center
+}
+
+.patient-entry { 
+	float:left;
+	clear: both;
+	width: 100%;
+	border-top:1px dotted gray;
+	padding-top:12px
+}
+
+.odd { float: left }
+
+.even { float: left; }
+
+.patient-header {
+	font-weight:bold
+}
+
+h3.patient-header { position: relative; line-height: normal; margin: 0 0 15px 0; padding: 0; font-size: 22px; }
+
+.patient-content {
+	margin: 18px 0 0 14px;
+	float: left;
+	width: 70%;
+}
+
+/* Removed per Vinny's request 
+#patient-listing-sidebar {
+	float:right;
+	border:1px solid gray;
+	padding:15px
+}
+*/
+
+#patient-listing-sidebar ul {
+	margin-top:10px;
+	margin-left:0;
+	list-style:none;
+}
+
+#patient-listing-sidebar ul li ul {
+	margin:0 0 10px 25px;
+}
+
+h1.patient-listing-title {
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:7px;
+	padding: 0 15px;
+}
+.bccont{background: #eee;margin-bottom:45px;}
+.gallery-breadcrumb {
+	padding: 5px 0;
+	font-family: 'Museo-Sans-300';
+	font-size: 13px;
+	color: #999;
+}
+.gallery-breadcrumb span{
+	margin: 0 5px;
+    padding: 0 10px;
+}
+.breadcrumbs a{
+    text-decoration: none;
+	color: #1d2939;
+}
+
+/* Single Patient View Styles */
+
+.single-content {
+	border-bottom: 1px dotted gray;
+	padding-bottom: 15px;
+	display: inline-block;
+	width: 100%
+}
+
+#patient-listing .patient-entry p {
+	margin-top:0;
+	padding-top:0;
+}
+
+#patient-listing .list-item{
+	float:left;text-align:center;
+}
+
+.single-patient-navigation {
+	margin-bottom:30px;min-height: 40px;display: flex;justify-content: space-between;
+}
+
+.single-patient-navigation a{
+	background-color: #617ba8;
+	font-family: open_sanssemibold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 8px 5px;
+    width: 164px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+.single-patient-navigation a:hover, .single-patient-navigation a:focus{
+    text-decoration: none;
+    color: hsla(0,0%,16%,.7);
+}
+
+.single-patient-navigation-bottom {
+	/*float: left;
+	width: 650px;*/
+	margin-top: 40px;
+	margin-bottom: 50px
+}
+
+.patient-meta-info {
+	margin-top:10px
+}
+
+img.patient-list-image { margin:3px; min-height: 90px; max-height: 150px;}
+img.patient-single-image {margin:3px; min-height: 200px; max-height: 300px;}
+
+/* Gallery page */
+
+.procedure-parent {
+	margin: 1em 1em 0 0;
+	padding: 0;
+}
+
+.aoleft {
+	float: left;
+	width: 116px;
+}
+
+.aoright {
+	float: left;
+	width: 300px;
+}
+.cases-detial-area {width:100%;}
+.cases-detial-area .case-detial-box-sec {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: 1px solid rgba(200,200,200,1.00);
+    background-color: #FFFFFF;
+	width: 100%;
+	min-height: 510px;margin-bottom: 20px;
+}
+.cases-detial-area .case-detial-box-sec .case-detail-box-cont {
+    margin: 50px;
+    display: table;
+}
+.case-detail-box-cont .case-detail-left {
+	width: 33.33333333%;float: left;display:table-cell;
+}
+.case-detail-box-cont .case-detail-right {
+	width: 66.66666667%;float: right;display:table-cell;
+}
+.case-detail-box-cont .case-detail-right .case-pics {
+    padding-left: 50px;
+    display: inline-block;
+    width: 100%;
+}
+.case-detail-box-cont .case-pics .before-pic {
+    float: left;
+    margin-right: 16px;
+    background-color: rgba(241,241,241,1.00);
+    text-align: center;
+    width: 48.3%;
+    height: 420px;
+    position: relative;
+	padding-bottom:0px;
+}
+.case-detail-box-cont .case-pics .before-pic .bef-aft-img img, .case-detail-box-cont .case-pics .after-pic .bef-aft-img img {
+   max-height: 365px;
+}
+.case-detail-box-cont .case-pics .after-pic {
+    background-color: rgba(241,241,241,1.00);
+    float: left;
+    text-align: center;
+    width: 48.3%;
+    height: 420px;
+    position: relative;
+	padding-bottom:0px;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec {
+    padding-left: 50px;
+    margin-top: 30px;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol {
+    display: inline-block;
+    list-style: outside none none;
+    width: 100%;
+	margin-left: 0px;
+    padding-left: 0px;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li {
+    width: 143px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li .thumb-case-view {
+    background-color: #989898;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li:hover .thumb-case-view a, .case-detail-box-cont .case-detail-right .bot-thumb-sec ol li.active .thumb-case-view a {
+    color: #FFF;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li a .before-pic {
+    float: left;
+    width: 50%;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li a .after-pic {
+    width: 50%;
+    float: left;
+}
+
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li a .before-pic img, .case-detail-box-cont .case-detail-right .bot-thumb-sec ol li a .after-pic img{
+	height: auto;
+    max-width: 100%;
+}
+
+.case-detail-box-cont .case-pics .before-pic span, .case-detail-box-cont .case-pics .after-pic span{
+	display: block;
+    color: #37393f;
+    font-size: 16px;
+    padding: 15px 0;
+    line-height: 16px;
+    width: 100%;
+	font-weight: bold;
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li .thumb-case-view {
+    background-color: #f1f1f1;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li:hover .thumb-case-view, .case-detail-box-cont .case-detail-right .bot-thumb-sec ol li.active .thumb-case-view {
+    background-color: #989898;
+}
+
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li .thumb-case-view a {
+    font-size: 12px;
+    color: #37393f;
+    padding: 8px 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li:hover .thumb-case-view a, .case-detail-box-cont .case-detail-right .bot-thumb-sec ol li.active .thumb-case-view a {
+    color: #FFF;
+}
+
+.case-detail-left .case-detail-text .cas-dtl-ttl {
+    font-size: 30px;
+    color: #617ba8;
+    line-height: 25px;
+    margin-bottom: 24px;
+}
+.case-detail-left .case-detail-text p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #4a4a4a;
+    margin-bottom: 21px;
+}
+.case-detail-left .case-detail-text .patient-age-sec {
+    display: block;
+    margin-bottom: 10px;
+}
+.case-detail-text .cont-btn {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.case-detail-text .cont-btn a {
+    background-color: #617ba8;
+	font-family: open_sanssemibold;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 6px 5px;
+    width: 142px;
+    display: inline-block;
+	font-weight:bold;
+}
+.case-detail-text .cont-btn a:hover {
+	color: hsla(0,0%,16%,.7);
+}
+.breadcrumb{display:none;}
+.category-img{max-height: 230px;position: relative;padding: 20px 20px 0;}
+.category-img img{max-width: 100%;width: 100%;height: auto; -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,.36); -moz-box-shadow: 1px 2px 2px rgba(0,0,0,.36);
+    box-shadow: 1px 2px 2px rgba(0,0,0,.36);}
+.category-img:after {
+    content: "Model";
+    position: absolute;
+    right: 25px;
+    bottom: 1px;
+    font-size: 10px;
+    color: rgb(112, 112, 112);
+    text-transform: uppercase;
+    font-family: arial;
+}
+.sub-header {display:none;}
+.gallery-breadcrumbs{background-color: #e1e2e4;padding: 10px 0;}
+.fancybox-container{z-index: 99999 !important;}
+.patients-template-default button#responsive-menu-button{z-index: 99999!important;}
+@media print {
+        body {
+		font: 12pt Georgia, "Times New Roman", Times, serif;
+		line-height: 1.3;
+		color:black;
+	}
+  .content, body, .content-bottom, body.sub { background: none !important}
+  .navigation, 
+  .procedures, 
+  .sidebar, 
+  .header, 
+  .header_sub, 
+  .feat_box, 
+  .feat_proc,
+  .footer, 
+  .gallery-breadcrumb, 
+  .post-edit-link, 
+  .single-patient-navigation, 
+  .single-patient-navigation-bottom,
+  .r_sidebar_sub,
+  .contact_sd,
+  .nav,
+  .banner_sub,
+  .row1_sub {
+  	display: none
+  }
+  .main, .content_sub, .content {
+  	width:100%;
+  }
+  .single-content { margin-bottom:15px; }
+}
+
+.patient-print {
+    padding: 5px 10px;
+    background: rgb(165, 165, 165);
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px rgb(114, 114, 114);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    font-size: 10px;
+    float:right;
+    font-style: normal;
+    text-decoration: none
+}
+.patient-print:hover {
+    background: rgb(126, 126, 126);
+    border: solid 1px rgb(114, 114, 114);
+    text-decoration: none;
+}
+.patient-print:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+
+.gallery-main-container {
+    margin: 0 auto;
+    display: block;
+    width: 1080px;
+	max-width: 100%;
+	padding: 0px;
+	margin-bottom: 20px;
+	margin-top: 36px;
+	text-align: left;
+}
+/*.gallery-main-container .gall-top-sec .top-left-sec, .gallery-main-container .gall-top-sec .top-right-sec{width:50%;}*/
+.top-home-btn{display: inline-block;}
+.pull-right {
+    float: right!important;
+}
+.cases-area{width:100%;margin-top: 20px;}
+.cases-area .all-case-box-sec ul {
+    padding-left: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.cases-area .all-case-box-sec ul li {
+    margin: 0px 24px 50px 0;
+    border: 1px solid rgba(200,200,200,1.00);
+    width: 30.9%;
+    float: left;
+	position: relative;
+}
+.cases-area .all-case-box-sec ul li:nth-child(3n+3) {
+    margin-right: 0;
+}
+.cases-area .all-case-box-sec ul li .case-box-cont {
+    margin: 20px;
+}
+.case-box-cont .cas-title {
+	text-transform: uppercase;
+    color: #617ba8;
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    text-align: center;
+	font-weight: bold;
+}
+.case-box-cont .cas-title span {
+    margin-left: 3px;
+}
+.case-box-cont .cas-title a{
+    color: #617ba8;
+    text-decoration: none;
+}
+.case-box-cont .cas-title a:hover {
+    color: #617ba8;
+}
+.case-box-cont .case-pics {
+    width: 100%;
+    display: inline-block;
+    height: auto;
+}
+.case-box-cont .case-pics a {
+    display: inline-block;
+    width: 100%;text-decoration: none;
+}
+.case-box-cont .case-pics .before-pic {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    width: 46.4%;
+    height: 194px;
+    position: relative;
+}
+
+.case-box-cont .case-pics .after-pic {
+    float: left;
+    text-align: center;
+    width: 46.4%;
+    height: 194px;
+    position: relative;
+}
+.case-box-cont .case-pics .before-pic span, .case-box-cont .case-pics .after-pic span {
+    display: block;
+    color: #37393f;
+    font-size: 16px;
+    padding: 4px 0;
+    line-height: 16px;
+    width: 100%;
+	font-weight: bold;
+}
+.case-box-cont .view-case-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 17px;
+	position: static;
+}
+.case-box-cont .view-case-btn a {
+    background-color: #617ba8;
+	font-family: open_sanssemibold;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 6px 5px;
+    width: 184px;
+    display: inline-block;
+    text-transform: uppercase;
+	font-weight:bold;
+	border: 2px solid #617ba8;
+}
+.case-box-cont .view-case-btn a:hover {
+	color: hsla(0,0%,16%,.7);
+}
+.case-box-cont .case-pics .before-pic .bef-aft-img, .case-box-cont .case-pics .after-pic .bef-aft-img{
+    
+}
+.case-box-cont .case-pics .before-pic .bef-aft-img img, .case-box-cont .case-pics .after-pic .bef-aft-img img {
+    max-height: 167px;
+    max-width: 100%;
+}
+.vc_custom_1531349184219 {
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    border-top-width: 0px !important;
+    padding-top: 1% !important;
+    padding-bottom: 1% !important;
+    background-image: url(../../../uploads/2018/07/breast-header-4.jpg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-top-color: #ffffff !important;
+}
+.vc_row[data-vc-full-width] {
+    -webkit-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    overflow: hidden;
+}
+.vc_row[data-vc-full-width] {
+    margin-left: 0px;
+}
+.vc_section[data-vc-full-width]>.vc_row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.vc_custom_1531502096487 {
+    margin-top: 5% !important;
+    margin-bottom: 7% !important;
+    padding-left: 1.7% !important;
+    padding-top: 1% !important;
+    padding-bottom: 1% !important;
+}
+#wpcf7-f148-o1 input[type=text], #wpcf7-f148-o1 input[type=email]{
+    width: 100% !important;
+    padding-left: 12px !important;
+}
+.top-home-btn a {
+    background-color: #617ba8;
+	font-family: open_sanssemibold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 8px 5px;
+    width: 164px;
+    display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	box-shadow: 0 4px 0 #cecece;
+    -moz-box-shadow: 0 4px 0 #cecece;
+    -webkit-box-shadow: 0 4px 0 #cecece;
+    -o-box-shadow: 0 4px 0 #cecece;
+}
+.tax-procedure .top-home-btn a {
+margin-top: 20px;
+}
+.top-home-btn a i {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.top-home-btn a:hover, .top-home-btn a:focus{
+	text-decoration: none;
+	color: hsla(0,0%,16%,.7);
+}
+.breast-title-sec.desktop-view{display: flex;justify-content: space-between;margin-right: 30px;}
+.breast-title-sec.mobile-view{display:none;}
+.photo-gallery-banner{background:url(../images/bg-gallery.png) no-repeat;
+    height: 202px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    margin-bottom: 3%;
+    padding-left: 35px;
+    background-position: 20px 10px;
+    background-size: 104% 95%;
+}
+.photo-gallery-banner h1 {
+    margin-top: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 45px;
+    padding-top: 24px;
+    margin-bottom: 0;
+	font-family: 'open_sanssemibold';
+    color: #617ba8!important;
+	line-height: 1.1;
+}
+.photo-gallery-banner h3 {
+    color: #fff;
+    font-size: 25px;
+    margin-top: 0;
+    text-transform: uppercase;
+	font-family: inherit;
+}
+.photo-gallery-banner .image-desk {
+    display: block;
+    margin-top: 20px;
+}
+.photo-gallery-banner .image-mobile {
+    display: none;
+}
+.actual-pg {
+    color: #fff;
+    margin-left: 39%;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+}
+.bg-image {
+    background: url(../images/kufman-bf-image.png) no-repeat;
+    background-size: 100% 100%;
+}
+.text-area h2 {
+    color: #617ba8;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.225;
+    margin-top: 20px!important;
+}
+.text-area p {
+    color: #485865;
+    font-size: 15px;
+    line-height: 26px;
+    display: block;
+	margin-bottom: 15px;
+}
+.image-kufman {
+    text-align: center;
+}
+.dr-kaufman-image {
+    padding-top: 26px;
+    max-width: 101%!important;
+	vertical-align: bottom;
+}
+@media (max-width: 767px) {
+	.patient-content{width: 94%;}
+	.treatments-single {width:100%;min-height:auto;display:block;}
+	.category-list ul {margin: 20px 0; min-height: auto;}
+	.category-list h3{margin-top: 20px;}
+	.cases-area .all-case-box-sec ul li{width: 95%; margin-left: 2.5%;}
+	.cases-detial-area .case-detial-box-sec{border:none;min-height: initial;}
+	.cases-detial-area .case-detial-box-sec .case-detail-box-cont {
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		display:block;
+	}
+	.case-detail-box-cont .case-detail-left {width: 100%; float:none; display:block;}
+	.case-detail-box-cont .case-detail-right {width: 100%;padding-right: 0;padding-left: 0;float: none;display:block;}
+	.case-detail-box-cont .case-detail-right .case-pics {
+    padding: 0;
+    width: 100%;
+	}
+	.case-detail-box-cont .case-detail-right .bot-thumb-sec{
+		padding-left:0px;
+	}
+	.case-detail-box-cont .case-pics .before-pic {
+    margin-right: 8px;
+    width: 48%;
+	}
+	.case-detail-box-cont .case-pics .after-pic {
+    width: 48%;
+    float: right;
+	}
+	.case-detail-box-cont .case-detail-right .bot-thumb-sec ol li {
+    width: 143px;
+    border: 0;
+    margin-right: 10px;
+	}
+	.single-patient-navigation a{display:block;margin-bottom: 0px;font-size: 12px;margin-top: 0px;width:auto;border-radius: 0;}
+	.single-patient-navigation span{float:none !important;}
+	
+	.vc_custom_1531349184219 h1 {
+		font-size: 36px !important;
+		padding: 20px 0 0 10px;
+	}
+	.vc_row[data-vc-full-width] {
+		padding-left: 0px !important;
+	}
+	.gallery-breadcrumb{margin-left:0px;}
+	.vc_custom_1531502096487{margin-top: 9% !important;margin-left: 10% !important;}
+	.gallery-main-container{padding: 0 10px;}
+	.gallery-breadcrumbs{margin-top: 60px;}
+	.gallery-breadcrumbs .breadcrumbs{padding-left: 10px;}
+	.case-box-cont .case-pics .before-pic{margin-right: 12px; height: auto;}
+	.case-box-cont .case-pics .after-pic{height: auto;}
+	.top-home-btn a i{display:none;}
+	.breast-title-sec.desktop-view{display:none;}
+	.breast-title-sec.mobile-view{display:block;}
+	
+	.row.treatments{display:block;}
+	.photo-gallery-banner h1{text-align: center;}
+	.photo-gallery-banner .image-desk {display: none;}
+	.photo-gallery-banner .image-mobile {display: block;}
+	.photo-gallery-banner {
+		background-color: #dedede;
+		background-image: none;
+		text-align: center;
+		height: auto;
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+	.col-xs-12 {
+		width: 100% !important;
+	}
+	.actual-pg {color: #485865;margin-left: 0;}
+	.text-area h2 {
+		text-align: center;
+		margin-top: 40px!important;
+	}
+	.kaufman-img {
+		display: none;
+	}
+	.bg-image .container{width: auto!important;}
+}
+@media (min-width: 768px) and (max-width: 768px) {
+	.gallery-breadcrumbs{margin-top: 95px;}
+	.photo-gallery-banner .image-desk {display: none;}
+	.photo-gallery-banner .image-mobile {display: block;float: right!important;}
+	.photo-gallery-banner h1{font-size: 38px;}
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+	.patient-content{width: 50%;}
+	.cases-area .all-case-box-sec ul li {
+		width: 46%;
+	}
+	.cases-area .all-case-box-sec ul li:nth-child(3n+3) {margin-right:25px;}
+	.treatments-single{margin-right: 30px;}
+	.case-detail-box-cont .case-pics .before-pic{margin-right: 10px;}
+}
+
+@media (max-width: 1280px) {
+	.patient-content{width: 60%;}
+}
+.case-detail-text, .view-case-btn a, .case-pics, .cont-btn a {
+	font-family: "sofiapro-light", helvetica-nueue !important;
+}

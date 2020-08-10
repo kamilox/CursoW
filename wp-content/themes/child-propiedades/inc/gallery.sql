@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS post_gallery (
+    post_gallery_id bigint(20) UNSIGNED NOT NULL,
+    post_id INT NOT NULL,
+    created_date datetime,
+    updated_date datetime,
+    gcase_details varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    gcase_notes varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    surgeon varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    hide_from_live varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    feature_category varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    gheight varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    gnweight varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    age varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    implant_size_left varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    implant_size_right varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    cup_size_before varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    cup_size_after varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    button_before_hidden varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+    button_after_hidden varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+);

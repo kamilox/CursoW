@@ -1,0 +1,1 @@
+$=jQuery.noConflict();$(document).ready(function(){$('.boton-actualidad').click(function(){alert('ok');});$('.boton-deportes').click(function(){alert('ok-deportes');});});

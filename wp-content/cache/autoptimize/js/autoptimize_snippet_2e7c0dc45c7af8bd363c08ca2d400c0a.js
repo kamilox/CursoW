@@ -1,0 +1,2 @@
+$=jQuery.noConflict();$(document).ready(function(){var mediaUploader;$('#media-button').click(function(e){e.preventDefault();if(mediaUploader){mediaUploader.open();return;}
+mediaUploader=wp.media.frames.file_frames=wp.media({title:'Upload picture',button:{text:'choose picture'},multiple:false});});});

@@ -1,0 +1,2 @@
+$=jQuery.noConflict();$(document).ready(function(){var eleccion="";$('.boton-piso').click(function(){eleccion='piso';cargar_noticias_ajax();});$('.boton-apartamento').click(function(){eleccion='apartamento';cargar_noticias_ajax();});function cargar_noticias_ajax(){var datos={'eleccion':eleccion}
+$.ajax({type:'post',url:admin_url.ajax_url,data:{action:'cargarCategoria',valor:datos},beforeSend:function(){$('#contenedor-propiedades').html(' cargando inmuebles');},success:function(){$('#contenedor-propiedades').html(datos);},error:function(){console.log(error);}});}});
