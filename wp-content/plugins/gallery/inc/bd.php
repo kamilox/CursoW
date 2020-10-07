@@ -2,7 +2,7 @@
     //save data
     function save_data(){
 
-       if(isset($_POST['post_type']) && 'gallery' == $_POST['post_type']){
+       if(isset($_POST['post_type']) && 'patients' == $_POST['post_type']){
          // print_r($_POST);
          // exit();
          // die();
@@ -10,9 +10,9 @@
          $refer = explode('=', $_REQUEST['_wp_http_referer']) ;
          $type = end($refer);
 
-         if($type == 'gallery'){
+         if($type == 'patients'){
            global $wpdb;   
-           $table = 'post_gallery';
+           $table = 'patients_gallery';
            //define values
            $id = $_POST['post_ID'];
            $created_date = date("Y-m-d H:i:s"); 
@@ -71,7 +71,7 @@
 
            //update values
            global $wpdb;   
-           $table = 'post_gallery';
+           $table = 'patients_gallery';
 
            $id = $_POST['post_ID'];
            $updated_date = date("Y-m-d H:i:s"); 

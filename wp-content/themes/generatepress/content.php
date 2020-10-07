@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php generate_do_microdata( 'article' ); ?>>
 	<div class="inside-article">
 		<?php
+		echo '<h1>aqhui es content</h1>';
 		/**
 		 * generate_before_content hook.
 		 *

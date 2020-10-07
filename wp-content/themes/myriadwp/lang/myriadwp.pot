@@ -1,0 +1,3711 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyriadWP\n"
+"POT-Creation-Date: 2020-09-23 21:38+0200\n"
+"PO-Revision-Date: 2020-09-02 12:04+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:91 inc/archive_default.php:123
+msgid "404"
+msgstr ""
+
+#: 404.php:92 inc/archive_default.php:124
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:93 inc/archive_default.php:125
+msgid "We can't seem to find the page you're looking for."
+msgstr ""
+
+#: 404.php:94 inc/archive_default.php:126
+msgid "Return To Home"
+msgstr ""
+
+#: comments.php:45
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:54
+msgid "No comments"
+msgstr ""
+
+#: comments.php:55 functions.php:5106 functions.php:5178
+#: inc/archive_default.php:68
+msgid "1 comment"
+msgstr ""
+
+#: comments.php:56
+msgid "comments"
+msgstr ""
+
+#: comments.php:139
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:159 comments.php:199 comments.php:251 comments.php:263
+#: comments.php:268
+msgid "Comment"
+msgstr ""
+
+#: comments.php:162 comments.php:202
+msgid "Leave a comment"
+msgstr ""
+
+#: comments.php:163 comments.php:203
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:164 comments.php:204
+msgid "Cancel reply"
+msgstr ""
+
+#: comments.php:165
+msgid "Submit Comment"
+msgstr ""
+
+#: comments.php:169 comments.php:211 comments.php:274 comments.php:279
+#: comments.php:285 comments.php:289 comments.php:290
+msgid "Name"
+msgstr ""
+
+#: comments.php:174 comments.php:216 comments.php:294 comments.php:298
+#: comments.php:302 comments.php:305 comments.php:306
+msgid "Email"
+msgstr ""
+
+#: comments.php:179 comments.php:221 comments.php:311 comments.php:324
+msgid "Website"
+msgstr ""
+
+#: comments.php:257
+msgid "Type in a comment"
+msgstr ""
+
+#: comments.php:269
+msgid "Your Comment"
+msgstr ""
+
+#: comments.php:315 comments.php:320 comments.php:325
+msgid "URL"
+msgstr ""
+
+#: comments.php:363
+msgid "Reply"
+msgstr ""
+
+#: comments.php:363
+msgid "Log in to leave a comment"
+msgstr ""
+
+#: comments.php:381
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:2941
+msgid "Thumb"
+msgstr ""
+
+#: functions.php:2975
+msgid ""
+"Default sidebar for blog and archive pages. For more options (for pages and "
+"posts), install mandatory plugins"
+msgstr ""
+
+#: functions.php:2986
+msgid "Sidebar 2 - install mandatory plugins"
+msgstr ""
+
+#: functions.php:2996
+msgid "Sidebar 3 - install mandatory plugins"
+msgstr ""
+
+#: functions.php:3011
+msgid "Sidebar to use in WooCommerce shop pages"
+msgstr ""
+
+#: functions.php:3022
+msgid "Sidebar to use in WooCommerce product pages"
+msgstr ""
+
+#: functions.php:3035
+msgid "1st box in footer. For more footer options, install mandatory plugins. "
+msgstr ""
+
+#: functions.php:3049 functions.php:3109
+msgid "2nd box in footer"
+msgstr ""
+
+#: functions.php:3059 functions.php:3119
+msgid "3rd box in footer"
+msgstr ""
+
+#: functions.php:3069 functions.php:3129
+msgid "4th box in footer"
+msgstr ""
+
+#: functions.php:3079 functions.php:3139
+msgid "5th box in footer"
+msgstr ""
+
+#: functions.php:3089 functions.php:3149
+msgid "6th box in footer"
+msgstr ""
+
+#: functions.php:3099
+msgid "1st box in footer"
+msgstr ""
+
+#: functions.php:3159
+msgid "Widget area of the menu"
+msgstr ""
+
+#: functions.php:3169
+msgid "Widget area of the mobile menu"
+msgstr ""
+
+#: functions.php:3179 functions.php:3189 functions.php:3199
+msgid "Widget area in Extra header"
+msgstr ""
+
+#: functions.php:3209
+msgid "Widget area in overlay"
+msgstr ""
+
+#: functions.php:3219
+msgid "Right Widget area in Toggle Top"
+msgstr ""
+
+#: functions.php:3229
+msgid "Bottom Widget area in Toggle Top"
+msgstr ""
+
+#: functions.php:3244
+msgid "Vertical area on the bottom of Lateral Toggle Left menu"
+msgstr ""
+
+#: functions.php:3269
+msgid "Default Menu"
+msgstr ""
+
+#: functions.php:4471
+msgid "First"
+msgstr ""
+
+#: functions.php:4474 inc/navigation.php:59 inc/navigation.php:350
+#: inc/navigation.php:416 inc/navigation.php:464
+#: woocommerce/loop/pagination.php:67
+msgid "Prev"
+msgstr ""
+
+#: functions.php:4504
+msgid "Last"
+msgstr ""
+
+#: functions.php:4507 inc/navigation.php:220 inc/navigation.php:259
+#: inc/navigation.php:288 inc/navigation.php:348 inc/navigation.php:462
+#: inc/navigation.php:534
+msgid "Next"
+msgstr ""
+
+#: functions.php:5093
+msgid "by"
+msgstr ""
+
+#: functions.php:5106 functions.php:5178 inc/archive_default.php:68
+msgid "0 comments"
+msgstr ""
+
+#: functions.php:5106 functions.php:5178 inc/archive_default.php:68
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: functions.php:5225
+msgid "Extra profile information"
+msgstr ""
+
+#: functions.php:5229
+msgid "Position"
+msgstr ""
+
+#: functions.php:5232
+msgid "Please enter your position."
+msgstr ""
+
+#: functions.php:5317
+msgid "Share on Facebook"
+msgstr ""
+
+#: functions.php:5328
+msgid "Share on Twitter"
+msgstr ""
+
+#: functions.php:5336
+msgid "Share on Google+"
+msgstr ""
+
+#: functions.php:5344
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: functions.php:5352
+msgid "Share on Tumblr"
+msgstr ""
+
+#: functions.php:5360
+msgid "Share on Pinterest"
+msgstr ""
+
+#: functions.php:5377
+msgid "Category - "
+msgstr ""
+
+#: functions.php:5379
+msgid "Tag - "
+msgstr ""
+
+#: functions.php:5381
+msgid "All posts by "
+msgstr ""
+
+#: functions.php:5383 functions.php:5385 functions.php:5387
+msgid "Archive for "
+msgstr ""
+
+#: functions.php:5390
+msgid "Asides"
+msgstr ""
+
+#: functions.php:5392
+msgid "Galleries"
+msgstr ""
+
+#: functions.php:5394
+msgid "Images"
+msgstr ""
+
+#: functions.php:5396
+msgid "Videos"
+msgstr ""
+
+#: functions.php:5398
+msgid "Quotes"
+msgstr ""
+
+#: functions.php:5400
+msgid "Links"
+msgstr ""
+
+#: functions.php:5402
+msgid "Statuses"
+msgstr ""
+
+#: functions.php:5404
+msgid "Audio"
+msgstr ""
+
+#: functions.php:5406
+msgid "Chats"
+msgstr ""
+
+#: functions.php:5413
+msgid "Page not found"
+msgstr ""
+
+#: functions.php:5416
+msgid "Search results for "
+msgstr ""
+
+#: functions.php:5420 page.php:196
+msgid "Archives"
+msgstr ""
+
+#: functions.php:5472
+msgid "This post is password protected."
+msgstr ""
+
+#: functions.php:5511
+msgid "All"
+msgstr ""
+
+#: inc/archive_default.php:133
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: inc/archive_default.php:134
+msgid "Please try again with different keywords."
+msgstr ""
+
+#: inc/navigation.php:114
+msgid "Newer posts"
+msgstr ""
+
+#: inc/navigation.php:122
+msgid "Older posts"
+msgstr ""
+
+#: inc/navigation.php:197 inc/navigation.php:241 inc/navigation.php:414
+msgid "Previous"
+msgstr ""
+
+#: inc/navigation.php:295 inc/navigation.php:357 inc/navigation.php:423
+#: inc/navigation.php:471
+msgid "View case study"
+msgstr ""
+
+#: inc/navigation.php:296 inc/navigation.php:358 inc/navigation.php:424
+#: inc/navigation.php:472
+msgid "Read article"
+msgstr ""
+
+#: inc/single-fullwidth.php:47 page.php:152 single.php:130
+msgid "Pages:"
+msgstr ""
+
+#: inc/single-fullwidth.php:53 page.php:158 single.php:136
+msgid "Next page"
+msgstr ""
+
+#: inc/single-fullwidth.php:54 page.php:159 single.php:137
+msgid "Previous page"
+msgstr ""
+
+#: inc/single-related-posts.php:93
+msgid "You may also like"
+msgstr ""
+
+#: options.php:29
+msgid "Other font-family"
+msgstr ""
+
+#: options.php:87
+msgid "Yes"
+msgstr ""
+
+#: options.php:88
+msgid "No"
+msgstr ""
+
+#: options.php:92 options.php:104
+msgid "1"
+msgstr ""
+
+#: options.php:93 options.php:105
+msgid "2"
+msgstr ""
+
+#: options.php:94 options.php:106
+msgid "3"
+msgstr ""
+
+#: options.php:95 options.php:107
+msgid "4"
+msgstr ""
+
+#: options.php:96 options.php:108
+msgid "5"
+msgstr ""
+
+#: options.php:97 options.php:109
+msgid "6"
+msgstr ""
+
+#: options.php:98 options.php:110
+msgid "7"
+msgstr ""
+
+#: options.php:99 options.php:111
+msgid "8"
+msgstr ""
+
+#: options.php:100 options.php:112
+msgid "9"
+msgstr ""
+
+#: options.php:113
+msgid "10"
+msgstr ""
+
+#: options.php:114
+msgid "11"
+msgstr ""
+
+#: options.php:115
+msgid "12"
+msgstr ""
+
+#: options.php:116
+msgid "13"
+msgstr ""
+
+#: options.php:117
+msgid "14"
+msgstr ""
+
+#: options.php:118
+msgid "15"
+msgstr ""
+
+#: options.php:119
+msgid "16"
+msgstr ""
+
+#: options.php:120
+msgid "17"
+msgstr ""
+
+#: options.php:121
+msgid "18"
+msgstr ""
+
+#: options.php:122
+msgid "19"
+msgstr ""
+
+#: options.php:123
+msgid "20"
+msgstr ""
+
+#: options.php:124
+msgid "21"
+msgstr ""
+
+#: options.php:125
+msgid "22"
+msgstr ""
+
+#: options.php:126
+msgid "23"
+msgstr ""
+
+#: options.php:127
+msgid "24"
+msgstr ""
+
+#: options.php:128
+msgid "25"
+msgstr ""
+
+#: options.php:129
+msgid "26"
+msgstr ""
+
+#: options.php:130
+msgid "27"
+msgstr ""
+
+#: options.php:131
+msgid "28"
+msgstr ""
+
+#: options.php:132
+msgid "29"
+msgstr ""
+
+#: options.php:133
+msgid "30"
+msgstr ""
+
+#: options.php:470
+msgid "Basic"
+msgstr ""
+
+#: options.php:476
+msgid "Default content width"
+msgstr ""
+
+#: options.php:487
+msgid "Change default content width on Tablet"
+msgstr ""
+
+#: options.php:494
+msgid "Default content width on Tablet"
+msgstr ""
+
+#: options.php:504 options.php:5175 options.php:5941
+msgid "Content background color"
+msgstr ""
+
+#: options.php:512
+msgid "Default content margin"
+msgstr ""
+
+#: options.php:514 options.php:523 options.php:533 options.php:542
+#: options.php:5097 options.php:5135 options.php:5144 options.php:5154
+msgid "Can be override for each page"
+msgstr ""
+
+#: options.php:521
+msgid "Default content top margin"
+msgstr ""
+
+#: options.php:531
+msgid "Default content bottom margin"
+msgstr ""
+
+#: options.php:540
+msgid "Default content padding"
+msgstr ""
+
+#: options.php:549
+msgid "Custom paddings"
+msgstr ""
+
+#: options.php:554 options.php:2549 options.php:2615 options.php:2670
+#: options.php:2916 options.php:2970 options.php:4938 options.php:5101
+#: options.php:5877 options.php:7040 options.php:7441 options.php:7942
+#: options.php:8194 options.php:8320
+msgid "Top"
+msgstr ""
+
+#: options.php:562 options.php:2557 options.php:2623 options.php:2678
+#: options.php:4946 options.php:5109 options.php:5885 options.php:7048
+#: options.php:7449 options.php:7950 options.php:8202 options.php:8328
+msgid "Right"
+msgstr ""
+
+#: options.php:570 options.php:2565 options.php:2631 options.php:2686
+#: options.php:2940 options.php:2994 options.php:4954 options.php:5117
+#: options.php:5893 options.php:7056 options.php:7457 options.php:7958
+#: options.php:8210 options.php:8336
+msgid "Bottom"
+msgstr ""
+
+#: options.php:578 options.php:2573 options.php:2639 options.php:2694
+#: options.php:4962 options.php:5125 options.php:5901 options.php:7064
+#: options.php:7465 options.php:7966 options.php:8218 options.php:8344
+msgid "Left"
+msgstr ""
+
+#: options.php:587
+msgid "Favicon"
+msgstr ""
+
+#: options.php:595
+msgid "Default sidebar for pages"
+msgstr ""
+
+#: options.php:597 options.php:609
+msgid "Can be overridden on each page"
+msgstr ""
+
+#: options.php:607
+msgid "Sidebar position"
+msgstr ""
+
+#: options.php:619
+msgid "Page transitions"
+msgstr ""
+
+#: options.php:630
+msgid "Smooth scrolling"
+msgstr ""
+
+#: options.php:635
+msgid "&nbsp;"
+msgstr ""
+
+#: options.php:643
+msgid "Steps"
+msgstr ""
+
+#: options.php:654 options.php:847
+msgid "Speed"
+msgstr ""
+
+#: options.php:667
+msgid "Body border"
+msgstr ""
+
+#: options.php:669
+msgid "Border around whole content"
+msgstr ""
+
+#: options.php:676
+msgid "Side border"
+msgstr ""
+
+#: options.php:678
+msgid "Only left and right "
+msgstr ""
+
+#: options.php:685
+msgid "Body border color"
+msgstr ""
+
+#: options.php:691
+msgid "Body border width"
+msgstr ""
+
+#: options.php:726
+msgid "Extra JavaScript"
+msgstr ""
+
+#: options.php:733
+msgid "Extra CSS"
+msgstr ""
+
+#: options.php:739
+msgid "Back to Top"
+msgstr ""
+
+#: options.php:741
+msgid "Top arrow on the bottom of website"
+msgstr ""
+
+#: options.php:748
+msgid "Customize cursor"
+msgstr ""
+
+#: options.php:756
+msgid "Cursor settings"
+msgstr ""
+
+#: options.php:762
+msgid "Cursor background color"
+msgstr ""
+
+#: options.php:769
+msgid "Cursor Ring Background color"
+msgstr ""
+
+#: options.php:776
+msgid "Cursor ring border color"
+msgstr ""
+
+#: options.php:783
+msgid "Cursor size"
+msgstr ""
+
+#: options.php:793
+msgid "Disable responsive layout"
+msgstr ""
+
+#: options.php:795
+msgid ""
+"If you, for some reason, want to disable responsive layout on mobile and "
+"tablets"
+msgstr ""
+
+#: options.php:802
+msgid "Disable sticky sidebars"
+msgstr ""
+
+#: options.php:804
+msgid "If you select YES sidebars will be regular"
+msgstr ""
+
+#: options.php:811
+msgid "Image custom sizes"
+msgstr ""
+
+#: options.php:814
+msgid ""
+"Insert width and height of the new image size and start Regenerate "
+"thumbnails plugin"
+msgstr ""
+
+#: options.php:820
+msgid "Instagram options"
+msgstr ""
+
+#: options.php:825
+msgid "Instagram 2020 Token"
+msgstr ""
+
+#: options.php:828
+msgid ""
+"You need only Token - https://developers.facebook.com/docs/instagram-basic-"
+"display-api/overview#user-token-generator"
+msgstr ""
+
+#: options.php:833
+msgid "Scroll indicator"
+msgstr ""
+
+#: options.php:841
+msgid "Scroll indicator settings"
+msgstr ""
+
+#: options.php:864
+msgid "Indicator color"
+msgstr ""
+
+#: options.php:871
+msgid "Indicator background color"
+msgstr ""
+
+#: options.php:878
+msgid "Thick"
+msgstr ""
+
+#: options.php:901
+msgid "Scroll indicator radius"
+msgstr ""
+
+#: options.php:911 options.php:3985
+msgid "Height"
+msgstr ""
+
+#: options.php:936
+msgid "Color settings"
+msgstr ""
+
+#: options.php:940 options.php:996 options.php:1022 options.php:3910
+#: options.php:5746 options.php:7169 options.php:7405
+msgid "Text color"
+msgstr ""
+
+#: options.php:946
+msgid "Link colors"
+msgstr ""
+
+#: options.php:951 options.php:1042 options.php:5765 options.php:5784
+msgid "Color"
+msgstr ""
+
+#: options.php:958 options.php:1089 options.php:3924
+msgid "Hover color"
+msgstr ""
+
+#: options.php:965
+msgid "Tag cloud (blog page)"
+msgstr ""
+
+#: options.php:970
+msgid "Text color "
+msgstr ""
+
+#: options.php:977 options.php:1003 options.php:5753
+msgid "Text hover color"
+msgstr ""
+
+#: options.php:984 options.php:1010 options.php:1170
+msgid "Background hover color"
+msgstr ""
+
+#: options.php:991
+msgid "Tag cloud (blog single and sidebar)"
+msgstr ""
+
+#: options.php:1017
+msgid "Link and Quote"
+msgstr ""
+
+#: options.php:1029 options.php:1049 options.php:1164
+msgid "Background color"
+msgstr ""
+
+#: options.php:1037
+msgid "Highlight colors"
+msgstr ""
+
+#: options.php:1056
+msgid "Background color 2"
+msgstr ""
+
+#: options.php:1063
+msgid "Sidebar colors"
+msgstr ""
+
+#: options.php:1068 options.php:5218
+msgid "Title Color"
+msgstr ""
+
+#: options.php:1075 options.php:5225
+msgid "Text Color"
+msgstr ""
+
+#: options.php:1082 options.php:5232
+msgid "Link Color"
+msgstr ""
+
+#: options.php:1104
+msgid "Social Sharing"
+msgstr ""
+
+#: options.php:1108
+msgid "Social sharing for pages"
+msgstr ""
+
+#: options.php:1116
+msgid "Social sharing for posts"
+msgstr ""
+
+#: options.php:1126
+msgid "Social sharing for portfolio items"
+msgstr ""
+
+#: options.php:1136
+msgid "Icon Options"
+msgstr ""
+
+#: options.php:1141
+msgid "Icons shape"
+msgstr ""
+
+#: options.php:1152
+msgid "Icon color"
+msgstr ""
+
+#: options.php:1158
+msgid "Icon hover color"
+msgstr ""
+
+#: options.php:1176
+msgid "Border color"
+msgstr ""
+
+#: options.php:1182
+msgid "Border hover color"
+msgstr ""
+
+#: options.php:1190
+msgid "Sharing Options"
+msgstr ""
+
+#: options.php:1195
+msgid "Facebook share"
+msgstr ""
+
+#: options.php:1203
+msgid "Twitter share"
+msgstr ""
+
+#: options.php:1211
+msgid "LinkedIn share"
+msgstr ""
+
+#: options.php:1219
+msgid "Google Plus share"
+msgstr ""
+
+#: options.php:1227
+msgid "Tumblr share"
+msgstr ""
+
+#: options.php:1235
+msgid "Pinterest share"
+msgstr ""
+
+#: options.php:1247
+msgid "Typography"
+msgstr ""
+
+#: options.php:1251
+msgid "Google Web Fonts"
+msgstr ""
+
+#: options.php:1256
+msgid "Google API key"
+msgstr ""
+
+#: options.php:1259
+msgid "Get the key at https://developers.google.com/fonts/docs/developer_api"
+msgstr ""
+
+#: options.php:1263
+msgid "Google Web Font family 1"
+msgstr ""
+
+#: options.php:1264 options.php:1280 options.php:1296 options.php:1312
+msgid "The quick brown fox jumps over a lazy dog"
+msgstr ""
+
+#: options.php:1272
+msgid "Google Web Font family, variants and subsets 1"
+msgstr ""
+
+#: options.php:1279
+msgid "Google Web Font family 2"
+msgstr ""
+
+#: options.php:1288
+msgid "Google Web Font family, variants and subsets 2"
+msgstr ""
+
+#: options.php:1295
+msgid "Google Web Font family 3"
+msgstr ""
+
+#: options.php:1304
+msgid "Google Web Font family, variants and subsets 3"
+msgstr ""
+
+#: options.php:1311
+msgid "Google Web Font family 4"
+msgstr ""
+
+#: options.php:1320
+msgid "Google Web Font family, variants and subsets 4"
+msgstr ""
+
+#: options.php:1328
+msgid "Each font has it's own class, so you can use it in Visual Composer."
+msgstr ""
+
+#: options.php:1334
+msgid "Main font"
+msgstr ""
+
+#: options.php:1341
+msgid ""
+"Use some standard font for whole site (Arial, Vedrana, Times New Roman..."
+msgstr ""
+
+#: options.php:1347
+msgid "Main font size"
+msgstr ""
+
+#: options.php:1364
+msgid "Custom Main font font-size"
+msgstr ""
+
+#: options.php:1371
+msgid "Main font weight"
+msgstr ""
+
+#: options.php:1379
+msgid "Main font style"
+msgstr ""
+
+#: options.php:1387
+msgid "Main font spacing"
+msgstr ""
+
+#: options.php:1395
+msgid "Main font height"
+msgstr ""
+
+#: options.php:1403
+msgid "Custom Main font line-height"
+msgstr ""
+
+#: options.php:1411
+msgid "Headings (H1, H2 ... H6) font"
+msgstr ""
+
+#: options.php:1418
+msgid "Use some standard font for Headers (Arial, Vedrana, Times New Roman..."
+msgstr ""
+
+#: options.php:1424
+msgid "Menu font"
+msgstr ""
+
+#: options.php:1431
+msgid "Use some standard font for Menus (Arial, Vedrana, Times New Roman..."
+msgstr ""
+
+#: options.php:1437
+msgid "Mobile menu font"
+msgstr ""
+
+#: options.php:1444
+msgid ""
+"Use some standard font for Mobile Menus (Arial, Vedrana, Times New Roman..."
+msgstr ""
+
+#: options.php:1450
+msgid "Sidebar Title Settings"
+msgstr ""
+
+#: options.php:1454 options.php:4637 options.php:7478
+msgid "Title font family"
+msgstr ""
+
+#: options.php:1468 options.php:4651 options.php:7492
+msgid "Custom Title font family"
+msgstr ""
+
+#: options.php:1474 options.php:7498
+msgid "Title size"
+msgstr ""
+
+#: options.php:1482 options.php:7506
+msgid "Custom Title font-size"
+msgstr ""
+
+#: options.php:1489 options.php:7513 options.php:7814 options.php:8097
+msgid "Title weight"
+msgstr ""
+
+#: options.php:1497 options.php:7521
+msgid "Title style"
+msgstr ""
+
+#: options.php:1505 options.php:7529
+msgid "Title transform"
+msgstr ""
+
+#: options.php:1513 options.php:7537
+msgid "Title spacing"
+msgstr ""
+
+#: options.php:1521 options.php:7545
+msgid "Title height"
+msgstr ""
+
+#: options.php:1529 options.php:7553
+msgid "Custom Title line-height"
+msgstr ""
+
+#: options.php:1539
+msgid "H1 Settings"
+msgstr ""
+
+#: options.php:1543 options.php:1611 options.php:1656
+msgid "H1 size"
+msgstr ""
+
+#: options.php:1551 options.php:1619 options.php:1664
+msgid "Custom H1 font-size"
+msgstr ""
+
+#: options.php:1558
+msgid "H1 weight"
+msgstr ""
+
+#: options.php:1566
+msgid "H1 style"
+msgstr ""
+
+#: options.php:1574
+msgid "H1 transform"
+msgstr ""
+
+#: options.php:1582 options.php:1627 options.php:1672
+msgid "H1 spacing"
+msgstr ""
+
+#: options.php:1590 options.php:1635 options.php:1680
+msgid "H1 height"
+msgstr ""
+
+#: options.php:1598 options.php:1643 options.php:1688
+msgid "Custom H1 line-height"
+msgstr ""
+
+#: options.php:1604 options.php:1761 options.php:1915 options.php:2072
+#: options.php:2227 options.php:2382 options.php:3653
+msgid "Responsive settings Tablet"
+msgstr ""
+
+#: options.php:1649 options.php:1805 options.php:1961 options.php:2117
+#: options.php:2272 options.php:2426 options.php:3690
+msgid "Responsive settings Phone"
+msgstr ""
+
+#: options.php:1695
+msgid "H2 Settings"
+msgstr ""
+
+#: options.php:1699 options.php:1768 options.php:1812
+msgid "H2 size"
+msgstr ""
+
+#: options.php:1707 options.php:1776 options.php:1820
+msgid "Custom H2 font-size"
+msgstr ""
+
+#: options.php:1714
+msgid "H2 weight"
+msgstr ""
+
+#: options.php:1722
+msgid "H2 style"
+msgstr ""
+
+#: options.php:1730
+msgid "H2 transform"
+msgstr ""
+
+#: options.php:1738 options.php:1783 options.php:1827
+msgid "H2 spacing"
+msgstr ""
+
+#: options.php:1746 options.php:1791 options.php:1835
+msgid "H2 height"
+msgstr ""
+
+#: options.php:1754 options.php:1799 options.php:1843
+msgid "Custom H2 line-height"
+msgstr ""
+
+#: options.php:1850
+msgid "H3 Settings"
+msgstr ""
+
+#: options.php:1854 options.php:1922 options.php:1968
+msgid "H3 size"
+msgstr ""
+
+#: options.php:1862 options.php:1930 options.php:1976
+msgid "Custom H3 font-size"
+msgstr ""
+
+#: options.php:1869
+msgid "H3 weight"
+msgstr ""
+
+#: options.php:1877
+msgid "H3 style"
+msgstr ""
+
+#: options.php:1885
+msgid "H3 transform"
+msgstr ""
+
+#: options.php:1893 options.php:1939 options.php:1985
+msgid "H3 spacing"
+msgstr ""
+
+#: options.php:1901 options.php:1947 options.php:1993
+msgid "H3 height"
+msgstr ""
+
+#: options.php:1909 options.php:1955 options.php:2001
+msgid "Custom H3 line-height"
+msgstr ""
+
+#: options.php:2007
+msgid "H4 Settings"
+msgstr ""
+
+#: options.php:2011 options.php:2079 options.php:2124
+msgid "H4 size"
+msgstr ""
+
+#: options.php:2019 options.php:2087 options.php:2132
+msgid "Custom H4 font-size"
+msgstr ""
+
+#: options.php:2026
+msgid "H4 weight"
+msgstr ""
+
+#: options.php:2034
+msgid "H4 style"
+msgstr ""
+
+#: options.php:2042
+msgid "H4 transform"
+msgstr ""
+
+#: options.php:2050 options.php:2095 options.php:2140
+msgid "H4 spacing"
+msgstr ""
+
+#: options.php:2058 options.php:2103 options.php:2148
+msgid "H4 height"
+msgstr ""
+
+#: options.php:2066 options.php:2111 options.php:2156
+msgid "Custom H4 line-height"
+msgstr ""
+
+#: options.php:2162
+msgid "H5 Settings"
+msgstr ""
+
+#: options.php:2166 options.php:2234 options.php:2279
+msgid "H5 size"
+msgstr ""
+
+#: options.php:2174 options.php:2242 options.php:2287
+msgid "Custom H5 font-size"
+msgstr ""
+
+#: options.php:2181
+msgid "H5 weight"
+msgstr ""
+
+#: options.php:2189
+msgid "H5 style"
+msgstr ""
+
+#: options.php:2197
+msgid "H5 transform"
+msgstr ""
+
+#: options.php:2205 options.php:2250 options.php:2295
+msgid "H5 spacing"
+msgstr ""
+
+#: options.php:2213 options.php:2258 options.php:2303
+msgid "H5 height"
+msgstr ""
+
+#: options.php:2221 options.php:2266 options.php:2311
+msgid "Custom H5 line-height"
+msgstr ""
+
+#: options.php:2317
+msgid "H6 Settings"
+msgstr ""
+
+#: options.php:2321 options.php:2389 options.php:2434
+msgid "H6 size"
+msgstr ""
+
+#: options.php:2329 options.php:2397 options.php:2442
+msgid "Custom H6 font-size"
+msgstr ""
+
+#: options.php:2336
+msgid "H6 weight"
+msgstr ""
+
+#: options.php:2344
+msgid "H6 style"
+msgstr ""
+
+#: options.php:2352
+msgid "H6 transform"
+msgstr ""
+
+#: options.php:2360 options.php:2404 options.php:2449
+msgid "H6 spacing"
+msgstr ""
+
+#: options.php:2368 options.php:2412 options.php:2457
+msgid "h6 height"
+msgstr ""
+
+#: options.php:2376 options.php:2420 options.php:2465
+msgid "Custom H6 line-height"
+msgstr ""
+
+#: options.php:2479
+msgid "Menu"
+msgstr ""
+
+#: options.php:2483
+msgid "Logo"
+msgstr ""
+
+#: options.php:2484
+msgid "Main logo. Dark version"
+msgstr ""
+
+#: options.php:2490
+msgid "Logo Retina"
+msgstr ""
+
+#: options.php:2491 options.php:2505
+msgid "Twice bigger for better resolution on Retina display"
+msgstr ""
+
+#: options.php:2497
+msgid "Logo 2"
+msgstr ""
+
+#: options.php:2498
+msgid ""
+"If primary logo isn't visible because of background image, you should define "
+"secondary logo (lighter). "
+msgstr ""
+
+#: options.php:2504
+msgid "Logo 2 Retina"
+msgstr ""
+
+#: options.php:2512
+msgid "Header style for entire site"
+msgstr ""
+
+#: options.php:2525
+msgid "Default header align"
+msgstr ""
+
+#: options.php:2536
+msgid "Lateral Toggle Left menu padding"
+msgstr ""
+
+#: options.php:2544
+msgid "Lateral Toggle Left Menu custom paddings"
+msgstr ""
+
+#: options.php:2582
+msgid "Lateral Toggle Left toggle button (3 lines) vertical align"
+msgstr ""
+
+#: options.php:2592
+msgid "Lateral Toggle Flex button vertical align"
+msgstr ""
+
+#: options.php:2602
+msgid "Lateral Toggle Flex menu padding"
+msgstr ""
+
+#: options.php:2610
+msgid "Lateral Toggle Flex Menu custom paddings"
+msgstr ""
+
+#: options.php:2647
+msgid "Lateral Left Menu vertical align"
+msgstr ""
+
+#: options.php:2657
+msgid "Lateral Left menu padding"
+msgstr ""
+
+#: options.php:2665
+msgid "Lateral Left Menu custom paddings"
+msgstr ""
+
+#: options.php:2702
+msgid "Default header layout"
+msgstr ""
+
+#: options.php:2704
+msgid "3lines triggers overlay menu"
+msgstr ""
+
+#: options.php:2722
+msgid "Overlay / 3 lines menu type"
+msgstr ""
+
+#: options.php:2737
+msgid "Show Extra header"
+msgstr ""
+
+#: options.php:2738
+msgid "Additional header row"
+msgstr ""
+
+#: options.php:2746
+msgid "Extra header Layout"
+msgstr ""
+
+#: options.php:2762
+msgid "Extra header Options"
+msgstr ""
+
+#: options.php:2768
+msgid "Menu position"
+msgstr ""
+
+#: options.php:2778
+msgid "Align"
+msgstr ""
+
+#: options.php:2792
+msgid "Searchbar"
+msgstr ""
+
+#: options.php:2793
+msgid ""
+"Add search icon (magnifying glass) to the menu (to visible header menus)"
+msgstr ""
+
+#: options.php:2801
+msgid "Search and WooCommerce icons(if selected) position"
+msgstr ""
+
+#: options.php:2802
+msgid "These icons will be shown in the last widget area in the row"
+msgstr ""
+
+#: options.php:2811
+msgid "Header Menu toggle"
+msgstr ""
+
+#: options.php:2812
+msgid "Header menu is shown if you click 3 lines menu"
+msgstr ""
+
+#: options.php:2820
+msgid "Background colors for overlay background colors menu"
+msgstr ""
+
+#: options.php:2821
+msgid "Comma separated color codes"
+msgstr ""
+
+#: options.php:2828
+msgid "Fixed header"
+msgstr ""
+
+#: options.php:2829
+msgid "Header is fixed on the top of the page"
+msgstr ""
+
+#: options.php:2839
+msgid "Headers visibility"
+msgstr ""
+
+#: options.php:2845
+msgid "Default header menu always visible"
+msgstr ""
+
+#: options.php:2854
+msgid "Extra Header Menu always visible"
+msgstr ""
+
+#: options.php:2863
+msgid "Header overflow"
+msgstr ""
+
+#: options.php:2864
+msgid ""
+"Header is above the content, or overflows it. Automaticaly sets header "
+"postition to fixed"
+msgstr ""
+
+#: options.php:2872
+msgid "Scroll to top visible"
+msgstr ""
+
+#: options.php:2873
+msgid "Header is hidden unless page is scrolled up"
+msgstr ""
+
+#: options.php:2881
+msgid "Border visible"
+msgstr ""
+
+#: options.php:2890
+msgid "Default Header Fullwidth"
+msgstr ""
+
+#: options.php:2898
+msgid "Default header left and right padding"
+msgstr ""
+
+#: options.php:2911
+msgid "Default header paddings"
+msgstr ""
+
+#: options.php:2964
+msgid "Extra header paddings"
+msgstr ""
+
+#: options.php:3019
+msgid "Compact Header on scroll"
+msgstr ""
+
+#: options.php:3020
+msgid "Header menu with smaller top and bottom padding on scroll"
+msgstr ""
+
+#: options.php:3028
+msgid "Compact header logo resize"
+msgstr ""
+
+#: options.php:3040
+msgid "Compact header top padding"
+msgstr ""
+
+#: options.php:3055
+msgid "Custom top padding (insert units)"
+msgstr ""
+
+#: options.php:3061
+msgid "Compact header bottom padding"
+msgstr ""
+
+#: options.php:3076
+msgid "Custom bottom padding (insert units)"
+msgstr ""
+
+#: options.php:3082
+msgid "Header color scheme"
+msgstr ""
+
+#: options.php:3090
+msgid "Default header custom transparency and visibility"
+msgstr ""
+
+#: options.php:3101
+msgid "Header background color"
+msgstr ""
+
+#: options.php:3102 options.php:3188 options.php:3773 options.php:4207
+#: options.php:4841 options.php:5568 options.php:6143 options.php:6150
+msgid "Default white"
+msgstr ""
+
+#: options.php:3108
+msgid "Default Header Gradient Background"
+msgstr ""
+
+#: options.php:3116
+msgid "Default header gradient options"
+msgstr ""
+
+#: options.php:3121 options.php:3215 options.php:4152
+msgid "Direction"
+msgstr ""
+
+#: options.php:3139 options.php:3233 options.php:5772 options.php:5791
+msgid "Color 2"
+msgstr ""
+
+#: options.php:3146 options.php:3240
+msgid "Color 3"
+msgstr ""
+
+#: options.php:3153 options.php:3247
+msgid "Color 4"
+msgstr ""
+
+#: options.php:3160
+msgid "Header background color opacity"
+msgstr ""
+
+#: options.php:3169
+msgid "Header background image"
+msgstr ""
+
+#: options.php:3175
+msgid "Default header background image style"
+msgstr ""
+
+#: options.php:3187
+msgid "Extra Header background color"
+msgstr ""
+
+#: options.php:3194
+msgid "Extra Header background color opacity"
+msgstr ""
+
+#: options.php:3202
+msgid "Extra Header Gradient Background"
+msgstr ""
+
+#: options.php:3210
+msgid "Extra header gradient options"
+msgstr ""
+
+#: options.php:3254
+msgid "Extra Header background image"
+msgstr ""
+
+#: options.php:3260
+msgid "Extra header background image size"
+msgstr ""
+
+#: options.php:3271
+msgid "Extra header background image position"
+msgstr ""
+
+#: options.php:3288
+msgid "Extra header background image repeat"
+msgstr ""
+
+#: options.php:3302
+msgid "Typography settings"
+msgstr ""
+
+#: options.php:3307
+msgid "Text color in header"
+msgstr ""
+
+#: options.php:3308 options.php:3475 options.php:3504 options.php:3766
+#: options.php:4178 options.php:4502 options.php:4812 options.php:5485
+#: options.php:6119 options.php:7780 options.php:8063
+msgid "Default black"
+msgstr ""
+
+#: options.php:3314 options.php:3887
+msgid "Text hover (and selected) color in menu"
+msgstr ""
+
+#: options.php:3315 options.php:3482 options.php:3888
+msgid "If not selected opacity 0.5 will be used"
+msgstr ""
+
+#: options.php:3322
+msgid "Default header font options"
+msgstr ""
+
+#: options.php:3327 options.php:3393
+msgid "Font size"
+msgstr ""
+
+#: options.php:3350 options.php:3417
+msgid "Font transform"
+msgstr ""
+
+#: options.php:3362 options.php:3430
+msgid "Font weight"
+msgstr ""
+
+#: options.php:3378 options.php:3447
+msgid "Line height"
+msgstr ""
+
+#: options.php:3388
+msgid "Default header Submenu font options"
+msgstr ""
+
+#: options.php:3456
+msgid "Default menu submenus Text Color"
+msgstr ""
+
+#: options.php:3462
+msgid "Default menu submenus Text Hover Color"
+msgstr ""
+
+#: options.php:3468
+msgid "Default menu submenus background Color"
+msgstr ""
+
+#: options.php:3474
+msgid "Text color in Extra header"
+msgstr ""
+
+#: options.php:3481
+msgid "Text hover (and selected) color in Extra menu"
+msgstr ""
+
+#: options.php:3488
+msgid "Megamenu fullwidth"
+msgstr ""
+
+#: options.php:3489
+msgid ""
+"To create megamenu, you have to add class megamenu to submenu you want to be "
+"shown as megamenu."
+msgstr ""
+
+#: options.php:3498
+msgid "Overlay Menu Settings"
+msgstr ""
+
+#: options.php:3503
+msgid "Overlay Menu Text Color"
+msgstr ""
+
+#: options.php:3510
+msgid "Overlay Menu Text Hover Color"
+msgstr ""
+
+#: options.php:3517
+msgid "Overlay Menu Text Stroke"
+msgstr ""
+
+#: options.php:3523
+msgid "Overlay Menu text align"
+msgstr ""
+
+#: options.php:3534
+msgid "Overlay Menu Widgets Position"
+msgstr ""
+
+#: options.php:3538 options.php:3550
+msgid "Only for Background image or Background color"
+msgstr ""
+
+#: options.php:3545
+msgid "Vertical align"
+msgstr ""
+
+#: options.php:3557 options.php:5013
+msgid "WOW effect"
+msgstr ""
+
+#: options.php:3558 options.php:5014
+msgid "Nice animated effect on scroll"
+msgstr ""
+
+#: options.php:3566 options.php:5022
+msgid "WOW delay"
+msgstr ""
+
+#: options.php:3567 options.php:5023
+msgid "WOW effect delay"
+msgstr ""
+
+#: options.php:3577 options.php:3660 options.php:3697
+msgid "Overlay menu font size"
+msgstr ""
+
+#: options.php:3611 options.php:3668 options.php:3705
+msgid "Custom text size (insert units)"
+msgstr ""
+
+#: options.php:3617
+msgid "Overlay Menu font transform"
+msgstr ""
+
+#: options.php:3629 options.php:3674 options.php:3711
+msgid "Overlay menu font weight"
+msgstr ""
+
+#: options.php:3645
+msgid "Overlay menu line height"
+msgstr ""
+
+#: options.php:3728
+msgid "Overlay Widgets color"
+msgstr ""
+
+#: options.php:3734
+msgid "Overlay Widgets Link color"
+msgstr ""
+
+#: options.php:3740
+msgid "Overlay Widgets Link Hover Color"
+msgstr ""
+
+#: options.php:3746
+msgid "Overlay menu background image"
+msgstr ""
+
+#: options.php:3747
+msgid "Default none"
+msgstr ""
+
+#: options.php:3753
+msgid "Overlay menu background image style"
+msgstr ""
+
+#: options.php:3765
+msgid "Overlay menu background color"
+msgstr ""
+
+#: options.php:3772
+msgid "Overlay menu background hover color"
+msgstr ""
+
+#: options.php:3776
+msgid "NOT for Overlay Background Image menu"
+msgstr ""
+
+#: options.php:3780
+msgid "Overlay menu Gradient Background"
+msgstr ""
+
+#: options.php:3788
+msgid "Overlay menu gradient direction"
+msgstr ""
+
+#: options.php:3804
+msgid "Overlay menu background gradient color 2"
+msgstr ""
+
+#: options.php:3811
+msgid "Overlay menu background gradient color 3"
+msgstr ""
+
+#: options.php:3818
+msgid "Overlay menu background gradient color 4"
+msgstr ""
+
+#: options.php:3825
+msgid "Overlay menu background color opacity"
+msgstr ""
+
+#: options.php:3833
+msgid "Overlay menu background color hover opacity"
+msgstr ""
+
+#: options.php:3834
+msgid "Only if background image is selected"
+msgstr ""
+
+#: options.php:3842
+msgid ""
+"Mobile Menu (Responsive) Settings (only for Default header layout without 3 "
+"lines)"
+msgstr ""
+
+#: options.php:3847
+msgid "Mobile Menu open style"
+msgstr ""
+
+#: options.php:3857
+msgid "Mobile Menu Width"
+msgstr ""
+
+#: options.php:3873
+msgid "Mobile Menu Colors"
+msgstr ""
+
+#: options.php:3879 options.php:3895
+msgid "Text"
+msgstr ""
+
+#: options.php:3881
+msgid "Only for overlay"
+msgstr ""
+
+#: options.php:3897
+msgid "Only for header"
+msgstr ""
+
+#: options.php:3904
+msgid "Mobile Menu Widgets Colors"
+msgstr ""
+
+#: options.php:3917 options.php:7176 options.php:7412
+msgid "Link color"
+msgstr ""
+
+#: options.php:3931
+msgid "Mobile menu font options"
+msgstr ""
+
+#: options.php:3937
+msgid "Size"
+msgstr ""
+
+#: options.php:3945
+msgid "Custom font size"
+msgstr ""
+
+#: options.php:3953
+msgid "Weight"
+msgstr ""
+
+#: options.php:3961
+msgid "Style"
+msgstr ""
+
+#: options.php:3969
+msgid "Transform"
+msgstr ""
+
+#: options.php:3977
+msgid "Spacing"
+msgstr ""
+
+#: options.php:3993
+msgid "Custom line height"
+msgstr ""
+
+#: options.php:4000
+msgid "Mobile Menu Background"
+msgstr ""
+
+#: options.php:4006
+msgid "Mobile Menu background gradient"
+msgstr ""
+
+#: options.php:4023
+msgid "Mobile Menu background gradient colors"
+msgstr ""
+
+#: options.php:4029 options.php:7116 options.php:7352
+msgid "Gradient 2nd color"
+msgstr ""
+
+#: options.php:4036 options.php:7123 options.php:7359
+msgid "Gradient 3rd color"
+msgstr ""
+
+#: options.php:4043
+msgid "Mobile Menu background color opacity"
+msgstr ""
+
+#: options.php:4051
+msgid "Mobile Menu background image"
+msgstr ""
+
+#: options.php:4057
+msgid "Background options"
+msgstr ""
+
+#: options.php:4063
+msgid "Mobile Menu background image position"
+msgstr ""
+
+#: options.php:4081
+msgid "Mobile Menu background image repeat"
+msgstr ""
+
+#: options.php:4093
+msgid "Mobile Menu background image size"
+msgstr ""
+
+#: options.php:4104
+msgid "Alignment"
+msgstr ""
+
+#: options.php:4110
+msgid "Menu text align"
+msgstr ""
+
+#: options.php:4121
+msgid "Menu horizontal align"
+msgstr ""
+
+#: options.php:4131
+msgid "Menu vertical align"
+msgstr ""
+
+#: options.php:4141
+msgid "Logo to use"
+msgstr ""
+
+#: options.php:4172
+msgid "Page Title and Featured images"
+msgstr ""
+
+#: options.php:4173
+msgid "You can override these options on each page"
+msgstr ""
+
+#: options.php:4177 options.php:7779 options.php:8062
+msgid "Title and Featured image background color"
+msgstr ""
+
+#: options.php:4184 options.php:7786 options.php:8069
+msgid "Title and Featured image background color opacity"
+msgstr ""
+
+#: options.php:4200 options.php:4834 options.php:5558 options.php:6133
+#: options.php:7802 options.php:8085
+msgid "Parallax"
+msgstr ""
+
+#: options.php:4206 options.php:7808 options.php:8091
+msgid "Title color"
+msgstr ""
+
+#: options.php:4213 options.php:7842 options.php:8125
+msgid "Title position"
+msgstr ""
+
+#: options.php:4229 options.php:7858 options.php:8141
+msgid "Title and Featured image height"
+msgstr ""
+
+#: options.php:4254 options.php:7883 options.php:8166
+msgid "Scroll button"
+msgstr ""
+
+#: options.php:4268
+msgid "Blog Page (Category / Archive)"
+msgstr ""
+
+#: options.php:4272
+msgid "Archive Content background color"
+msgstr ""
+
+#: options.php:4278
+msgid "Archive Content text color"
+msgstr ""
+
+#: options.php:4284
+msgid "Archive (category, autor, tag) page style"
+msgstr ""
+
+#: options.php:4303
+msgid "Arhive (category, autor, tag) number of columns"
+msgstr ""
+
+#: options.php:4316
+msgid "Show whole content or only excerpt"
+msgstr ""
+
+#: options.php:4325
+msgid "Show meta data"
+msgstr ""
+
+#: options.php:4330 options.php:5642
+msgid "Post Single Meta Style"
+msgstr ""
+
+#: options.php:4341 options.php:5653
+msgid "Small Post Meta"
+msgstr ""
+
+#: options.php:4347 options.php:5659
+msgid "Bold Post Meta"
+msgstr ""
+
+#: options.php:4354
+msgid "Date"
+msgstr ""
+
+#: options.php:4361
+msgid "Author"
+msgstr ""
+
+#: options.php:4368
+msgid "Categories"
+msgstr ""
+
+#: options.php:4375
+msgid "Comments count"
+msgstr ""
+
+#: options.php:4382
+msgid "Tags"
+msgstr ""
+
+#: options.php:4391
+msgid "Boxed"
+msgstr ""
+
+#: options.php:4392
+msgid "Only for Blog styles 2, 3, 8 & 9"
+msgstr ""
+
+#: options.php:4399
+msgid "Emphasize first post"
+msgstr ""
+
+#: options.php:4407
+msgid "Emphasized Post Style"
+msgstr ""
+
+#: options.php:4417
+msgid "Archive Style"
+msgstr ""
+
+#: options.php:4428
+msgid "Thumb sizes"
+msgstr ""
+
+#: options.php:4443 options.php:4551 options.php:6439
+msgid "Image height"
+msgstr ""
+
+#: options.php:4470 options.php:7685
+msgid "Image radius"
+msgstr ""
+
+#: options.php:4478
+msgid "Radius size"
+msgstr ""
+
+#: options.php:4501 options.php:7679
+msgid "Shadow color"
+msgstr ""
+
+#: options.php:4508
+msgid "Shadow color opacity"
+msgstr ""
+
+#: options.php:4525
+msgid "Gap (Grid Advanced)"
+msgstr ""
+
+#: options.php:4578
+msgid "Row height for Grid Advanced"
+msgstr ""
+
+#: options.php:4594
+msgid "Show excerpt"
+msgstr ""
+
+#: options.php:4602
+msgid "Captions position"
+msgstr ""
+
+#: options.php:4622
+msgid "Titles color"
+msgstr ""
+
+#: options.php:4627
+msgid "Hovers color"
+msgstr ""
+
+#: options.php:4632
+msgid "Border hovers color"
+msgstr ""
+
+#: options.php:4658
+msgid "Title font size"
+msgstr ""
+
+#: options.php:4666
+msgid "Custom Title font size"
+msgstr ""
+
+#: options.php:4673
+msgid "Title font weight"
+msgstr ""
+
+#: options.php:4681
+msgid "Title font style"
+msgstr ""
+
+#: options.php:4689
+msgid "Title font transform"
+msgstr ""
+
+#: options.php:4697
+msgid "Title font spacing"
+msgstr ""
+
+#: options.php:4705
+msgid "Title font line height"
+msgstr ""
+
+#: options.php:4713
+msgid "Custom Title font line-height"
+msgstr ""
+
+#: options.php:4719 options.php:5508 options.php:6069 options.php:6338
+msgid "Duotone effect"
+msgstr ""
+
+#: options.php:4727 options.php:5516 options.php:6077 options.php:6346
+msgid "Duotone custom color"
+msgstr ""
+
+#: options.php:4733 options.php:5304 options.php:5386 options.php:5522
+#: options.php:6083 options.php:6352 options.php:6687 options.php:6770
+msgid "Duotone effect gradient"
+msgstr ""
+
+#: options.php:4741 options.php:5312 options.php:5394 options.php:5530
+#: options.php:6091 options.php:6360 options.php:6695 options.php:6778
+msgid "Gradient direction"
+msgstr ""
+
+#: options.php:4756 options.php:5545 options.php:6106 options.php:6375
+msgid "Duotone custom color 2"
+msgstr ""
+
+#: options.php:4762 options.php:5551 options.php:6112 options.php:6381
+msgid "Duotone custom color 3"
+msgstr ""
+
+#: options.php:4768 options.php:5452 options.php:6009 options.php:7898
+#: options.php:8253
+msgid "Change logo and header font color below Featured image"
+msgstr ""
+
+#: options.php:4770 options.php:5454 options.php:6011
+msgid ""
+"Only if Default header and Fullwidth post style are selected WITHOUT "
+"background color"
+msgstr ""
+
+#: options.php:4777 options.php:5461 options.php:6018 options.php:7906
+#: options.php:8261
+msgid "New Menu Font color below Featured image"
+msgstr ""
+
+#: options.php:4783 options.php:5468 options.php:5993 options.php:7912
+#: options.php:8267
+msgid "Change logo and header font color over Featured image"
+msgstr ""
+
+#: options.php:4785 options.php:5470
+msgid "Only if Default header and Fullwidth post style are selected"
+msgstr ""
+
+#: options.php:4792 options.php:5477 options.php:6002 options.php:7920
+#: options.php:8275
+msgid "New Menu Font color over Featured image"
+msgstr ""
+
+#: options.php:4793 options.php:5176 options.php:5183 options.php:5190
+#: options.php:5462 options.php:5478 options.php:5942 options.php:5949
+#: options.php:5956 options.php:6003 options.php:6019
+msgid "Can be override for each post"
+msgstr ""
+
+#: options.php:4799
+msgid ""
+"Show Title and Featured image for category /archive / tag / author pages"
+msgstr ""
+
+#: options.php:4805
+msgid "Featured image for archive pages"
+msgstr ""
+
+#: options.php:4811
+msgid "Archive Title and Featured image background color"
+msgstr ""
+
+#: options.php:4818
+msgid "Archive Title and Featured image background color opacity"
+msgstr ""
+
+#: options.php:4840
+msgid "Archive Title color"
+msgstr ""
+
+#: options.php:4847
+msgid "Archive Title position"
+msgstr ""
+
+#: options.php:4863
+msgid "Archive Title and Featured image height"
+msgstr ""
+
+#: options.php:4888
+msgid "Archive Content Width"
+msgstr ""
+
+#: options.php:4900
+msgid "Archive content margin"
+msgstr ""
+
+#: options.php:4908
+msgid "Archive content top margin"
+msgstr ""
+
+#: options.php:4917
+msgid "Archive content bottom margin"
+msgstr ""
+
+#: options.php:4925
+msgid "Archive content padding"
+msgstr ""
+
+#: options.php:4933
+msgid "Archive content custom paddings"
+msgstr ""
+
+#: options.php:4973
+msgid "Default sidebar for category / archive pages"
+msgstr ""
+
+#: options.php:4984
+msgid "Navigation"
+msgstr ""
+
+#: options.php:4994
+msgid "Archive navigation"
+msgstr ""
+
+#: options.php:4999
+msgid "Archive navigation text color"
+msgstr ""
+
+#: options.php:5006
+msgid "Archive navigation background color"
+msgstr ""
+
+#: options.php:5035
+msgid "Default Image"
+msgstr ""
+
+#: options.php:5036
+msgid "If there's no featured image set, this image will be used."
+msgstr ""
+
+#: options.php:5043
+msgid "Blog Single"
+msgstr ""
+
+#: options.php:5047
+msgid "Default Single Post Style"
+msgstr ""
+
+#: options.php:5048
+msgid "You can override it for each post"
+msgstr ""
+
+#: options.php:5058
+msgid "Single Post Row Content Width"
+msgstr ""
+
+#: options.php:5069
+msgid "Change Single Post Row Content width on Tablet"
+msgstr ""
+
+#: options.php:5076
+msgid "Single Post Row Content width on Tablet"
+msgstr ""
+
+#: options.php:5087
+msgid "Single Post Row Content Padding"
+msgstr ""
+
+#: options.php:5095
+msgid "Single Post Row content custom paddings"
+msgstr ""
+
+#: options.php:5133
+msgid "Single Post Row content margin"
+msgstr ""
+
+#: options.php:5142
+msgid "Single Post Row content top margin"
+msgstr ""
+
+#: options.php:5152
+msgid "Single Post Row content bottom margin"
+msgstr ""
+
+#: options.php:5161
+msgid "Content width"
+msgstr ""
+
+#: options.php:5162
+msgid "Post content, Comments, Comment form section width"
+msgstr ""
+
+#: options.php:5182 options.php:5948
+msgid "Content text color"
+msgstr ""
+
+#: options.php:5189 options.php:5955
+msgid "Content link color"
+msgstr ""
+
+#: options.php:5196 options.php:5962
+msgid "Content link hover color"
+msgstr ""
+
+#: options.php:5202
+msgid "Default sidebar for single posts"
+msgstr ""
+
+#: options.php:5213
+msgid "Sidebar Colors"
+msgstr ""
+
+#: options.php:5239
+msgid "Link Hover color"
+msgstr ""
+
+#: options.php:5246 options.php:6320
+msgid "Show related posts"
+msgstr ""
+
+#: options.php:5255
+msgid "Show Excerpt"
+msgstr ""
+
+#: options.php:5266
+msgid "Related posts layout"
+msgstr ""
+
+#: options.php:5274 options.php:6387
+msgid "Date and Title layout"
+msgstr ""
+
+#: options.php:5282 options.php:6330
+msgid "Duotone effects on related post's featured images"
+msgstr ""
+
+#: options.php:5290
+msgid "Post related post's duotone effect"
+msgstr ""
+
+#: options.php:5298
+msgid "Post related post's duotone custom color"
+msgstr ""
+
+#: options.php:5327
+msgid "Post related post's duotone custom color 2"
+msgstr ""
+
+#: options.php:5333
+msgid "Post related post's duotone custom color 3"
+msgstr ""
+
+#: options.php:5339
+msgid "Post Navigation Settings"
+msgstr ""
+
+#: options.php:5344
+msgid "Default Single Post Style Navigation"
+msgstr ""
+
+#: options.php:5356
+msgid "Post navigation link in the middle"
+msgstr ""
+
+#: options.php:5364 options.php:6748
+msgid "Duotone effects on background images"
+msgstr ""
+
+#: options.php:5372 options.php:6756
+msgid "Post navigation duotone effect"
+msgstr ""
+
+#: options.php:5380 options.php:6764
+msgid "Post navigation duotone custom color"
+msgstr ""
+
+#: options.php:5409 options.php:6793
+msgid "Post navigation duotone custom color 2"
+msgstr ""
+
+#: options.php:5415 options.php:6799
+msgid "Post navigation duotone custom color 3"
+msgstr ""
+
+#: options.php:5422
+msgid "Fullwidth navigation section (recommended for Previous / Next styles)"
+msgstr ""
+
+#: options.php:5428
+msgid "Post navigation text color"
+msgstr ""
+
+#: options.php:5434
+msgid "Post navigation background color"
+msgstr ""
+
+#: options.php:5440
+msgid "Post navigation background color opacity"
+msgstr ""
+
+#: options.php:5448 options.php:5968
+msgid "Featured Image / Title Settings"
+msgstr ""
+
+#: options.php:5484
+msgid "Single post Title and Featured image background color"
+msgstr ""
+
+#: options.php:5491
+msgid "Single post Title and Featured image background color opacity"
+msgstr ""
+
+#: options.php:5560 options.php:6135
+msgid "Only if Fullwidth style is selected"
+msgstr ""
+
+#: options.php:5567
+msgid "Single post Title color"
+msgstr ""
+
+#: options.php:5574
+msgid "Single post Title weight"
+msgstr ""
+
+#: options.php:5591
+msgid "Single post Title Size"
+msgstr ""
+
+#: options.php:5602
+msgid "Single post Title position"
+msgstr ""
+
+#: options.php:5618
+msgid "Single post Title and Featured image height"
+msgstr ""
+
+#: options.php:5666
+msgid "Post Scroll button"
+msgstr ""
+
+#: options.php:5679
+msgid "Comment form Settings"
+msgstr ""
+
+#: options.php:5683
+msgid "Comment form layout"
+msgstr ""
+
+#: options.php:5692
+msgid "Background input color"
+msgstr ""
+
+#: options.php:5698
+msgid "Comment form button shape"
+msgstr ""
+
+#: options.php:5707
+msgid "Text on comment button"
+msgstr ""
+
+#: options.php:5714
+msgid "Comment form button size"
+msgstr ""
+
+#: options.php:5725
+msgid "Comment form button gradient direction"
+msgstr ""
+
+#: options.php:5741
+msgid "Comment form button"
+msgstr ""
+
+#: options.php:5760
+msgid "Comment form button background color"
+msgstr ""
+
+#: options.php:5779
+msgid "Comment form button hover background color"
+msgstr ""
+
+#: options.php:5801
+msgid "Portfolio Items"
+msgstr ""
+
+#: options.php:5813
+msgid "Portfolio Item default style"
+msgstr ""
+
+#: options.php:5823
+msgid "Portfolio Item Content Width"
+msgstr ""
+
+#: options.php:5834
+msgid "Text Container Width"
+msgstr ""
+
+#: options.php:5847
+msgid "Change Portfolio Item Content width on Tablet"
+msgstr ""
+
+#: options.php:5854
+msgid "Portfolio Item Content width on Tablet"
+msgstr ""
+
+#: options.php:5864
+msgid "Portfolio Item Content Padding"
+msgstr ""
+
+#: options.php:5872
+msgid "Portfolio item custom paddings"
+msgstr ""
+
+#: options.php:5910
+msgid "Portfolio Item content margin"
+msgstr ""
+
+#: options.php:5918
+msgid "Portfolio Item content top margin"
+msgstr ""
+
+#: options.php:5926
+msgid "Portfolio Item content bottom margin"
+msgstr ""
+
+#: options.php:5934
+msgid "Portfolio item content colors"
+msgstr ""
+
+#: options.php:5972
+msgid "Title background color for Featured Title style"
+msgstr ""
+
+#: options.php:5978
+msgid "Change logo and header font color over Title"
+msgstr ""
+
+#: options.php:5980
+msgid ""
+"Only if Default header and Featured Image Title portfolio style are selected"
+msgstr ""
+
+#: options.php:5987
+msgid "New Menu Font color over Title"
+msgstr ""
+
+#: options.php:5995
+msgid "Only if Default header and Fullwidth portfolio style are selected"
+msgstr ""
+
+#: options.php:6025
+msgid "Title area fullwidth"
+msgstr ""
+
+#: options.php:6034
+msgid "Title area Container Width"
+msgstr ""
+
+#: options.php:6047 options.php:7770 options.php:8053
+msgid "Featured image area fullwidth"
+msgstr ""
+
+#: options.php:6056
+msgid "Featured image area Container Width"
+msgstr ""
+
+#: options.php:6118
+msgid "Portfolio Title and Featured image background color"
+msgstr ""
+
+#: options.php:6125
+msgid "Portfolio Title and Featured image background color opacity"
+msgstr ""
+
+#: options.php:6142
+msgid "Portfolio Title color"
+msgstr ""
+
+#: options.php:6149
+msgid "Portfolio Post meta color"
+msgstr ""
+
+#: options.php:6156
+msgid "Portfolio Title weight"
+msgstr ""
+
+#: options.php:6173
+msgid "Portfolio Title Size"
+msgstr ""
+
+#: options.php:6184
+msgid "Portfolio Title position"
+msgstr ""
+
+#: options.php:6200
+msgid "Portfolio Featured image height"
+msgstr ""
+
+#: options.php:6224
+msgid "Portfolio Title height (Style Featured Title)"
+msgstr ""
+
+#: options.php:6248
+msgid "Portfolio post Scroll button"
+msgstr ""
+
+#: options.php:6263
+msgid "Portfolio Attributes Settings"
+msgstr ""
+
+#: options.php:6267
+msgid "Attributes Layout"
+msgstr ""
+
+#: options.php:6277
+msgid "Portfolio Item Attributes caption"
+msgstr ""
+
+#: options.php:6284
+msgid "Portfolio Item attribute 1 caption"
+msgstr ""
+
+#: options.php:6291
+msgid "Portfolio Item attribute 2 caption"
+msgstr ""
+
+#: options.php:6298
+msgid "Portfolio Item attribute 3 caption"
+msgstr ""
+
+#: options.php:6305
+msgid "Portfolio Item attribute 4 caption"
+msgstr ""
+
+#: options.php:6313
+msgid "Portfolio Item content caption"
+msgstr ""
+
+#: options.php:6396
+msgid "Extra images Settings"
+msgstr ""
+
+#: options.php:6400
+msgid "Extra Images Layout"
+msgstr ""
+
+#: options.php:6412
+msgid "Extra Images Container Width"
+msgstr ""
+
+#: options.php:6425
+msgid "Fullwidth images container"
+msgstr ""
+
+#: options.php:6431
+msgid "Disable padding for Extra images container"
+msgstr ""
+
+#: options.php:6465
+msgid "Emphasize Size of Active Slide"
+msgstr ""
+
+#: options.php:6473
+msgid "Emphasize Opacity of Active Slide"
+msgstr ""
+
+#: options.php:6481 options.php:6872
+msgid "Carousel Navigation"
+msgstr ""
+
+#: options.php:6494
+msgid "Bottom navigation alignment"
+msgstr ""
+
+#: options.php:6503 options.php:6885
+msgid "Carousel Navigation Color"
+msgstr ""
+
+#: options.php:6511
+msgid "Fraction Navigation"
+msgstr ""
+
+#: options.php:6519
+msgid "Auto Height"
+msgstr ""
+
+#: options.php:6527
+msgid "Centered slide"
+msgstr ""
+
+#: options.php:6533
+msgid "Fade effect"
+msgstr ""
+
+#: options.php:6539
+msgid "Loop"
+msgstr ""
+
+#: options.php:6545
+msgid "Auto Play"
+msgstr ""
+
+#: options.php:6551
+msgid "Speed (in ms)"
+msgstr ""
+
+#: options.php:6558
+msgid "Delay (in ms)"
+msgstr ""
+
+#: options.php:6565
+msgid "Gap between slides (only number)"
+msgstr ""
+
+#: options.php:6575
+msgid "Extra Images Columns"
+msgstr ""
+
+#: options.php:6587
+msgid "Stretch last row"
+msgstr ""
+
+#: options.php:6593
+msgid "Image radius size"
+msgstr ""
+
+#: options.php:6615
+msgid "Extra Images Gap"
+msgstr ""
+
+#: options.php:6640
+msgid "Height for Grider and Flex"
+msgstr ""
+
+#: options.php:6656
+msgid "Images width and height"
+msgstr ""
+
+#: options.php:6658
+msgid "w1 h1, w2 h2, w2 h1 w1 h2, w3 h2, w1 h3"
+msgstr ""
+
+#: options.php:6665
+msgid "Duotone effects on Extra Images"
+msgstr ""
+
+#: options.php:6673
+msgid "Extra Images duotone effect"
+msgstr ""
+
+#: options.php:6681
+msgid "Extra Images duotone custom color"
+msgstr ""
+
+#: options.php:6710
+msgid "Extra Images duotone custom color 2"
+msgstr ""
+
+#: options.php:6716
+msgid "Extra Images duotone custom color 3"
+msgstr ""
+
+#: options.php:6724
+msgid "Portfolio Navigation Settings"
+msgstr ""
+
+#: options.php:6728
+msgid "Default Portfolio Post Style Navigation"
+msgstr ""
+
+#: options.php:6740
+msgid "Portfolio navigation link in the middle"
+msgstr ""
+
+#: options.php:6806
+msgid "Fullwidth navigation section "
+msgstr ""
+
+#: options.php:6813
+msgid "Portfolio Post navigation text color"
+msgstr ""
+
+#: options.php:6819
+msgid "Portfolio Post navigation background color"
+msgstr ""
+
+#: options.php:6825
+msgid "Portfolio Post navigation background color opacity"
+msgstr ""
+
+#: options.php:6835
+msgid "Testimonials Settings"
+msgstr ""
+
+#: options.php:6839
+msgid "Show testimonials below the content"
+msgstr ""
+
+#: options.php:6847
+msgid "Testimonial category to show"
+msgstr ""
+
+#: options.php:6855
+msgid "Number of items to show (-1 for all)"
+msgstr ""
+
+#: options.php:6862
+msgid "Testimonial type"
+msgstr ""
+
+#: options.php:6893
+msgid "Carousel Background Pattern"
+msgstr ""
+
+#: options.php:6899
+msgid "Carousel Background color"
+msgstr ""
+
+#: options.php:6905
+msgid "Carousel Background color 2"
+msgstr ""
+
+#: options.php:6911
+msgid "Carousel Text color"
+msgstr ""
+
+#: options.php:6917
+msgid "Carousel Speed in ms"
+msgstr ""
+
+#: options.php:6924
+msgid "Carousel Slides per view (integer or auto)"
+msgstr ""
+
+#: options.php:6931
+msgid "Carousel Gap between slides"
+msgstr ""
+
+#: options.php:6943
+msgid "Footer"
+msgstr ""
+
+#: options.php:6947
+msgid "Don't show footer"
+msgstr ""
+
+#: options.php:6955
+msgid "Footer width"
+msgstr ""
+
+#: options.php:6966
+msgid "Change Footer width on Tablet"
+msgstr ""
+
+#: options.php:6973
+msgid "Footer width on Tablet"
+msgstr ""
+
+#: options.php:6983
+msgid "Footer positioning"
+msgstr ""
+
+#: options.php:6993
+msgid "Footer widgets layout"
+msgstr ""
+
+#: options.php:7016
+msgid "Footer content vertical align 1st row"
+msgstr ""
+
+#: options.php:7026
+msgid "Default footer padding"
+msgstr ""
+
+#: options.php:7035
+msgid "Default footer custom paddings"
+msgstr ""
+
+#: options.php:7072
+msgid "Footer widgets alignment"
+msgstr ""
+
+#: options.php:7085
+msgid "Footer 1st row background color"
+msgstr ""
+
+#: options.php:7091
+msgid "Footer background gradient"
+msgstr ""
+
+#: options.php:7109
+msgid "Footer 1st row background gradient colors"
+msgstr ""
+
+#: options.php:7130
+msgid "Footer 1st row background color opacity"
+msgstr ""
+
+#: options.php:7138
+msgid "Footer background image"
+msgstr ""
+
+#: options.php:7144
+msgid "Footer background image style"
+msgstr ""
+
+#: options.php:7156
+msgid "Footer 1st Row Colors"
+msgstr ""
+
+#: options.php:7162 options.php:7398
+msgid "Widget title color"
+msgstr ""
+
+#: options.php:7183 options.php:7419
+msgid "Link hover color"
+msgstr ""
+
+#: options.php:7192
+msgid "Footer border"
+msgstr ""
+
+#: options.php:7194
+msgid "Border around whole footer content"
+msgstr ""
+
+#: options.php:7201
+msgid "Footer border color"
+msgstr ""
+
+#: options.php:7207
+msgid "Footer border width"
+msgstr ""
+
+#: options.php:7241
+msgid "Footer border custom options"
+msgstr ""
+
+#: options.php:7252
+msgid "Footer 2nd row settings"
+msgstr ""
+
+#: options.php:7256
+msgid "Show 2nd row in footer"
+msgstr ""
+
+#: options.php:7264
+msgid "Footer 2nd row widgets layout"
+msgstr ""
+
+#: options.php:7287
+msgid "Footer 2nd row widgets alignment"
+msgstr ""
+
+#: options.php:7302
+msgid "Footer 2nd row content vertical align"
+msgstr ""
+
+#: options.php:7312
+msgid "Same style for 2nd row Footer as Footer 1st row"
+msgstr ""
+
+#: options.php:7313
+msgid "Use the same background image and style as for Footer above"
+msgstr ""
+
+#: options.php:7322
+msgid "Footer 2nd row background color"
+msgstr ""
+
+#: options.php:7328
+msgid "Footer 2nd row background gradient"
+msgstr ""
+
+#: options.php:7345
+msgid "Footer 2nd row background gradient colors"
+msgstr ""
+
+#: options.php:7366
+msgid "Footer 2nd row background color opacity"
+msgstr ""
+
+#: options.php:7374
+msgid "Footer 2nd row background image"
+msgstr ""
+
+#: options.php:7380
+msgid "Footer 2nd row background image style"
+msgstr ""
+
+#: options.php:7392
+msgid "Footer 2nd Row Colors"
+msgstr ""
+
+#: options.php:7427
+msgid "Default footer 2 padding"
+msgstr ""
+
+#: options.php:7435
+msgid "Default footer 2 custom paddings"
+msgstr ""
+
+#: options.php:7474
+msgid "Footer Title Settings"
+msgstr ""
+
+#: options.php:7566
+msgid "WooCommerce"
+msgstr ""
+
+#: options.php:7570
+msgid "WooCommmerce Content Width"
+msgstr ""
+
+#: options.php:7581
+msgid "Show WooCommerce shopping cart in the menu"
+msgstr ""
+
+#: options.php:7583
+msgid ""
+"Cart icon will be shown near the logo, or menu, depending on header you've "
+"chosen "
+msgstr ""
+
+#: options.php:7592
+msgid "Show My Acount icon next to cart icon"
+msgstr ""
+
+#: options.php:7595
+msgid "Profile icon will be shown near the cart icon"
+msgstr ""
+
+#: options.php:7601
+msgid "Background Color Scheme (for buttons and icons)"
+msgstr ""
+
+#: options.php:7607 options.php:7627
+msgid "Primary"
+msgstr ""
+
+#: options.php:7614 options.php:7634
+msgid "Secondary"
+msgstr ""
+
+#: options.php:7621
+msgid "Text Color Scheme (for buttons and icons)"
+msgstr ""
+
+#: options.php:7642
+msgid "Shop page sidebar"
+msgstr ""
+
+#: options.php:7644 options.php:7653
+msgid "In Appearance -> Widgets "
+msgstr ""
+
+#: options.php:7651
+msgid "Single product sidebar"
+msgstr ""
+
+#: options.php:7660
+msgid "Shop page number of columns"
+msgstr ""
+
+#: options.php:7671
+msgid "Shadow around thumbs"
+msgstr ""
+
+#: options.php:7710
+msgid "Shop page layout"
+msgstr ""
+
+#: options.php:7719
+msgid "Number of related products"
+msgstr ""
+
+#: options.php:7734
+msgid "Product gallery position"
+msgstr ""
+
+#: options.php:7739
+msgid "product thumb style"
+msgstr ""
+
+#: options.php:7746
+msgid "No product image"
+msgstr ""
+
+#: options.php:7752
+msgid "SHOP PAGES Featured image and title"
+msgstr ""
+
+#: options.php:7756
+msgid "Show Featured image and title on shop page"
+msgstr ""
+
+#: options.php:7764
+msgid "Shop (category) default image"
+msgstr ""
+
+#: options.php:7831 options.php:8114
+msgid "Title Size"
+msgstr ""
+
+#: options.php:7929
+msgid "WooCommerce shop page Content Padding"
+msgstr ""
+
+#: options.php:7937
+msgid "WooCommerce shop page custom paddings"
+msgstr ""
+
+#: options.php:7975
+msgid "WooCommerce shop page content margin"
+msgstr ""
+
+#: options.php:7983
+msgid "WooCommerce shop page content top margin"
+msgstr ""
+
+#: options.php:7991
+msgid "WooCommerce shop page content bottom margin"
+msgstr ""
+
+#: options.php:8005
+msgid ""
+"Featured image and title on Account pages (My Account, Cart and Checkout)"
+msgstr ""
+
+#: options.php:8009
+msgid "Show Featured image and title on Account pages"
+msgstr ""
+
+#: options.php:8017
+msgid "My Account image"
+msgstr ""
+
+#: options.php:8023
+msgid "My Account title"
+msgstr ""
+
+#: options.php:8029
+msgid "Cart image"
+msgstr ""
+
+#: options.php:8035
+msgid "Cart page title"
+msgstr ""
+
+#: options.php:8041
+msgid "Checkout image"
+msgstr ""
+
+#: options.php:8047
+msgid "Checkout page title"
+msgstr ""
+
+#: options.php:8181
+msgid "Woo Account page Content Padding"
+msgstr ""
+
+#: options.php:8189
+msgid "Woo Account page custom paddings"
+msgstr ""
+
+#: options.php:8227
+msgid "Woo Account page content margin"
+msgstr ""
+
+#: options.php:8235
+msgid "Woo Account page content top margin"
+msgstr ""
+
+#: options.php:8243
+msgid "Woo Account page content bottom margin"
+msgstr ""
+
+#: options.php:8283
+msgid "Featured image and title on Product single pages"
+msgstr ""
+
+#: options.php:8287
+msgid "Woo Single Content Width"
+msgstr ""
+
+#: options.php:8298
+msgid "Woo Single Content Width Below Product image"
+msgstr ""
+
+#: options.php:8307
+msgid "Woo Single Content Padding"
+msgstr ""
+
+#: options.php:8315
+msgid "Woo single page custom paddings"
+msgstr ""
+
+#: options.php:8353
+msgid "Woo single page content margin"
+msgstr ""
+
+#: options.php:8361
+msgid "Woo single page content top margin"
+msgstr ""
+
+#: options.php:8369
+msgid "Woo single page content bottom margin"
+msgstr ""
+
+#: options.php:8377
+msgid "Change logo and header font color on product pages"
+msgstr ""
+
+#: options.php:8385
+msgid "New Menu Font color on product pages"
+msgstr ""
+
+#: page.php:202
+msgid "Meta"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:393
+#: plugins/class-tgm-plugin-activation.php:912
+#: plugins/class-tgm-plugin-activation.php:2618
+#: plugins/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:394
+#: plugins/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:1019
+#: plugins/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3594
+#: plugins/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s done."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: woocommerce/brankic_menu-woo.php:11
+msgid "Shop"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:210
+msgid "Product"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:223
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:227
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:244
+msgid "Total"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:259
+msgid "View Basket"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:260
+msgid "Checkout"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:349
+msgid "Continue shopping"
+msgstr ""
+
+#: woocommerce/brankic_woo.php:351
+msgid "View cart"
+msgstr ""
+
+#: woocommerce/brankic_woo_cart.php:6
+msgid "Close"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:45
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:72
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:80
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:28
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:63
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:29
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:29
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:25
+msgid "Shipping Address"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:27
+msgid "Ship to a different address?"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:61
+#: woocommerce/single-product/tabs/additional-information.php:25
+msgid "Additional information"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:27
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:31
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:37
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:42
+msgid "Password change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid "Current password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:49
+msgid "New password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:53
+msgid "Confirm new password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:63
+msgid "Save changes"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:30
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:41
+msgid "Clear"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:31
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:32
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:47
+#: woocommerce/single-product/product-image.php:75
+#: woocommerce/single-product/product-image.php:112
+msgid "Awaiting product image"
+msgstr ""
+
+#: woocommerce/single-product/related.php:26
+msgid "Related products"
+msgstr ""

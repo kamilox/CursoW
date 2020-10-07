@@ -1,41 +1,9 @@
-$ = jQuery.noConflict();
+jQuery(document).ready(function(){
 
-$(document).ready(function(){
-        
-    $('#new-row').attr('disabled', true);
-    // checkbox values
-    $('#hide_from_live').click(function(){
-        if($('#hide_from_live_hidden').val() == 0){
-            $('#hide_from_live_hidden').val(1)
-        }else{
-            $('#hide_from_live_hidden').val(0)
-        }
-    });
-
-    
-    $('#feature_category').click(function(){
-        if($('#feature_category_hidden').val() == 0){
-            $('#feature_category_hidden').val(1)
-        }else{
-            $('#feature_category_hidden').val(0)
-        }
-    });
-
-    if($('#hide_from_live_hidden').val() == 1 ){
-        $('#hide_from_live').attr('checked', true);
-    }else{
-        $('#hide_from_live').attr('checked', false);
-    }
-
-    if($('#feature_category_hidden').val() == 1 ){
-        $('#feature_category').attr('checked', true);
-    }else{
-        $('#feature_category').attr('checked', false);
-    }
-
-    $('.uploadImage').click(function(){
-       var Img = $(this).parents().eq(0).siblings('div').children('img');
+    jQuery('.uploadImage').click(function(){
+       var Img = jQuery(this).parents().eq(0).siblings('div').children('img');
        console.log(Img);
+       var images = [];
        var ImgRefence = Img.attr('src');
         var mediaUploader;
         if(mediaUploader){
@@ -48,111 +16,87 @@ $(document).ready(function(){
                 button: {
                     text: 'Choose picture'
                 },
-                multiple: false
+                multiple: true
             });
 
             mediaUploader.on('select', function(){
-                attachment = mediaUploader.state().get('selection').first().toJSON();
-                Img.attr('src', attachment.url);
-                Img.css('opacity', '1');
-                if(ImgRefence != null){
-                    saveUrl(attachment.url, ImgRefence);
-                }else{
-                    saveUrl(attachment.url);
+                var uploaded_images = mediaUploader.state().get('selection');
+                var attachment_ids = uploaded_images.map( function( attachment ) {
+                    attachment = attachment.toJSON();
+                    jQuery(
+                            '<li class="gallery-item close-'+ attachment.id+'" id="'+ attachment.url+'">'
+                                +'<div class="image-container">'
+                                    +'<img src="'+ attachment.url+'"   class="picture-new">'
+                                    +'<input type="hidden" value="'+ attachment.url+'"  class="gallery-item-url">'
+                                +'</div>'
+                                +'<div class="button-close-container">'
+                                    +'<input type="button" class="close-div" value="Remove Image" onclick="closeDiv('+"'"+attachment.id+"'"+')"  id="close"/>'
+                                +'</div>'
+                            +'</li>').appendTo('.gallery-container');
+                }).join();
+                var url_images = [];
+
+                for (var i = uploaded_images.toJSON().length - 1; i >= 0; i--) {
+                    url_images += (uploaded_images.toJSON()[i].url)+',';
                 }
+                jQuery('#images').val(url_images);
             });
-            mediaUploader.open();
             
+            mediaUploader.open();
     });
 
-    $('.updateImage').click(function(){
-        var Img = $(this).parents().eq(0).siblings('div').children('img');
-        var ImgRefence = Img.attr('src');
-        var mediaUploaderUpdate;
-        if(mediaUploaderUpdate){
-            mediaUploaderUpdate.open();
-            return;
-        }
-         
-        mediaUploaderUpdate = wp.media.frames.file_frames = wp.media({
-            title: 'Upload picture',
-                button: {
-                    text: 'Choose picture'
-                },
-                multiple: false
-            });
- 
-            mediaUploaderUpdate.on('select', function(){
-                attachment = mediaUploaderUpdate.state().get('selection').first().toJSON();
-                Img.attr('src', attachment.url);
-                Img.css('opacity', '1');
-                updateUrl(attachment.url, ImgRefence);
-               
-            });
-            mediaUploaderUpdate.open();
-             
-     });
-
-
+    var urlGallery      = window.location.pathname.split('/');     // Returns full URL (https://example.com/path/example.html)
+    //console.log(urlGallery[urlGallery.length - 2]);
+    // Load the sortable actions for move the images
+    if (urlGallery[urlGallery.length - 2] == "wp-admin") {
+        jQuery('.gallery-container').sortable({
+          update : function(event, ui) {
+            jQuery('#resultado').html('');
+            jQuery('#resultado').append(ui.item.parent().attr('id')+",");
+            jQuery('#resultado').append(ui.item.parent().sortable('toArray')+",");
+            var arrayResult = jQuery('#resultado').html();
+            var clearArray = arrayResult.split(',').reverse();
+            var imgArray = [];
+            for (var i = clearArray.length - 1; i >= 0; i--) {
+                if (clearArray[i] != "undefined") {
+                    imgArray += clearArray[i]+',';
+                }
+            }
+            jQuery('#images').val(imgArray);
+          }
+        });
+    }
 });// end document ready
 
     //delete rows
     function closeDiv(className){
+        var close = jQuery('.close-'+className).attr('id');
 
-        var close = $('.'+className).parents().eq(0).attr('id');
-        if($('#'+close).attr('id') != "id-1"){
-            $('#'+close).remove();
-        }else{
-            $('.messages').addClass('error').html('Sorry you can´t delete this row');
-            setTimeout(function(){ 
-                $('.error').css({
-                    'height': '0',
-                    'padding': '0',
-                    'margin' : '0',
-                    'visibility' : 'hidden',
-                    'opacity' : '0',
-                });
-             }, 3000);
+        if(jQuery('#images').val() != ''){
+            var imagesArray = jQuery('#images').val().split(',');
+            const itemToRemove = imagesArray.indexOf(close);
+            imagesArray.splice(itemToRemove, 1);
+            jQuery('.close-'+className).remove();
+            jQuery('#images').val(imagesArray.join(','))
         }
-    }
     
-    var acum = ""; 
-    function saveUrl(url, reference){;
-        console.log(url + '//' + reference)
-        if(reference == ""){
-            acum = acum + url + ',';
-            $('#images').val(acum);
-        }else{
-            var arraySave = acum.split(',');
-            var indexId = arraySave.indexOf(reference);
-            if(indexId != -1){
-                arraySave.splice(indexId,1, url);
-                acum = arraySave.join(',');
-                $('#images').val(acum);
-            }
-        }
-        var showButton = $('#images').val().split(',').length-1;
-        if (showButton >= 2){
-            $('#new-row').attr('disabled', false);
-        }
     }
 
-    function updateUrl(url, reference){;
-        console.log(url + '//' + reference)
-        if(reference == ""){
-            acum = acum + url + ',';
-            $('#images').val(acum);
-        }else{
-            var arraySave = $('#images').val().split(',');
-            var indexId = arraySave.indexOf(reference);
-            if(indexId != -1){
-                arraySave.splice(indexId,1, url);
-                acum = arraySave.join(',');
-                $('#images').val(acum);
-            }
-        }
-        var showButton = $('#images').val().split(',').length-1;
-        if (showButton >= 2){
-            $('#new-row').attr('disabled', false);
-        }
-    }
+    /*function move(){
+        jQuery('.gallery-container').sortable({
+              update : function(event, ui) {
+                jQuery('#resultado').html('');
+                jQuery('#resultado').append(ui.item.parent().attr('id')+",");
+                jQuery('#resultado').append(ui.item.parent().sortable('toArray')+",");
+                var arrayResult = jQuery('#resultado').html();
+                var clearArray = arrayResult.split(',').reverse();
+                var imgArray = [];
+                for (var i = clearArray.length - 1; i >= 0; i--) {
+                    if (clearArray[i] != "undefined") {
+                        imgArray += clearArray[i]+',';
+                    }
+                }
+                jQuery('#images').val(imgArray);
+              }
+          });
+    }*/

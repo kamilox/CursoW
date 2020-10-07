@@ -1,41 +1,95 @@
 <?php
 /**
- * Plugin Name: Gallery
- * Description: Makes your custom images gallery
+ * Plugin Name:  Gallery Patients Photos
+ * Description: Makes your custom images gallery, please create the gallery page and add the short code [gallery_index]
  * Version: 1.0.0
  * Author: Camilo Contreras
- * Text Domain: Gallery
+ * Text Domain: patients
  */
 
 /**
- * Gallery main plugin file.
- */
+ * patients main plugin file.
+*/
+function patients_settings_table() {
+    global $wpdb;
+    $patients_settings = 'patients_settings';
+    $charset_collate = $wpdb->get_charset_collate();
+    
+    $settings = "CREATE TABLE IF NOT EXISTS $patients_settings (
+        id int(9) NOT NULL AUTO_INCREMENT,
+        logo_url varchar(125)  NULL,
+        procedure_title_color varchar(64)  NULL,
+        display_excerpt_in_gallery varchar(64)  NULL,
+        primary_button_background_color varchar(64)  NULL,
+        primary_button_border_color varchar(64)  NULL,
+        primary_button_font_color varchar(64)  NULL,
+        secondary_button_background_color varchar(64)  NULL,
+        secondary_button_border_color varchar(64)  NULL,
+        secondary_button_font_color varchar(64)  NULL,
+        UNIQUE KEY id(id)
+    ) $charset_collate;";
+
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($settings);
+}
+register_activation_hook(__FILE__, 'patients_settings_table');
+
+function patients_gallery_table() {
+    global $wpdb;
+    $gallery_patients = 'patients_gallery';
+    $gallery = "CREATE TABLE IF NOT EXISTS $gallery_patients (
+        patients_gallery_id bigint(20) UNSIGNED NOT NULL,
+        post_id int(11) NOT NULL,
+        created_date datetime DEFAULT NULL,
+        updated_date datetime DEFAULT NULL,
+        gcase_details varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+        gcase_notes varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+        surgeon varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+        hide_from_live tinyint(1) NOT NULL,
+        feature_category tinyint(1) NOT NULL,
+        gheight varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+        gweight varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+        age varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+        implant_size_left varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+        implant_size_right varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+        cup_size_before varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+        cup_size_after varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+        button_before_hidden varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+        button_after_hidden varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+        images text NOT NULL
+    ) $charset_collate;";
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($gallery);
+}
+register_activation_hook(__FILE__, 'patients_gallery_table');
 
  // db Connection
 require_once('inc/bd.php');
-//require_once('add_default_procedures.php');
 
 function styles(){
     wp_enqueue_style('parent-style',  plugins_url( '/inc/css/style.css', __FILE__ ) );
+    //wp_enqueue_style('colorpicker',  plugins_url( '/inc/plugins-supports/css/colorpicker.css', __FILE__ ) );
+    // Only include jquery core
     wp_enqueue_script('jquery');
-    wp_enqueue_script('media_uploader',  plugins_url( '/inc/js/media_uploader.js', __FILE__ ), array('jquery'), 1.0);
-    wp_enqueue_script('new_image_row',  plugins_url( '/inc/js/new_image_row.js', __FILE__ ), array('jquery'), 1.0);
-    wp_enqueue_script('gallery_carousel',  plugins_url( '/inc/js/gallery_carousel.js', __FILE__ ), array('jquery'), 1.0);
+    wp_enqueue_script('jquery-ui-core');
+    wp_enqueue_script( 'jquery-ui-sortable');
+    wp_enqueue_script('gallery',  plugins_url( '/inc/js/gallery.js', __FILE__ ), array('jquery', 'jquery-ui-core','jquery-ui-sortable'), 1.1);
+    wp_enqueue_script('gallery',  plugins_url( '/inc/js/color-picker-iris/dist/iris.js', __FILE__ ), array('jquery', 'jquery-ui-core'), 1.1);
 }
 add_action('init', 'styles');
 
-function gallery(){
+function patients(){
     $labels = array(
-        'name' => _x('All Patients Gallery', get_current_theme()),
-        'singular_name' => _x('Gallery', get_current_theme()),
-        'menu_name' => _x('Gallery', get_current_theme()),
+        'name' => _x('All Patients gallery', get_current_theme()),
+        'singular_name' => _x('patients', get_current_theme()),
+        'menu_name' => _x('patients', get_current_theme()),
         'name_admin_bar' =>  _x('Admin bar', get_current_theme()),
         'add_new' =>  _x('Add New Patient' , get_current_theme()),
         'add_new_item' =>  _x('Add new patient', get_current_theme()),
         'new_item' =>  _x('New Patient', get_current_theme()),
         'edit_item' =>  _x('Edit Patient', get_current_theme()),
         'view_item' =>  _x('View Patient', get_current_theme()),
-        'all_items' =>  _x('All Patients', get_current_theme()),
+        'all_items' =>  _x('All patients', get_current_theme()),
         'search_item' =>  _x('Search Patient', get_current_theme()),
         'parent_item_colon' =>  _x('Parent item colon', get_current_theme()),
         'not_found' =>  _x('Patient not found ', get_current_theme()),
@@ -48,8 +102,8 @@ function gallery(){
         'public' => true,
         'publicly_qweryable' => true,
         'show_ui' => true,
-        'show_in_menu' => 'photo_gallery',
-        'rewrite' => array('slug' => 'gallery'),
+        'show_in_menu' => 'photo_patients',
+        'rewrite' => array('slug' => 'patients'),
         'capability_type' => 'post',
         'has_archive' => true,
         'hierarchical' => true,
@@ -61,32 +115,32 @@ function gallery(){
         )
         
     );
-    register_post_type('gallery', $args);
+    register_post_type('patients', $args);
 }
-add_action('init', 'gallery');
+add_action('init', 'patients');
 //add custom links
-function add_gallery_submenu(){
+function add_patients_submenu(){
     add_menu_page(
-        'photo_gallery',
+        'photo_patients',
         'Photo gallery',
         'manage_options',
-        'photo_gallery',
+        'photo_patients',
         'labels',
         'dashicons-admin-page', 
         6
     );
 
     add_submenu_page(
-        'photo_gallery',//parent slug
+        'photo_patients',//parent slug
         '', // 
-        'Add new item', //
+        'Add new patient', //
         'manage_options', // 
-        'gallery', //  
+        'patients', //  
         'add_new_item' // 
     );
 
     add_submenu_page(
-        'photo_gallery',//parent slug
+        'photo_patients',//parent slug
         '', // 
         'Procedures', //
         'manage_options', // 
@@ -95,74 +149,94 @@ function add_gallery_submenu(){
     );
     
     add_submenu_page(
-        'photo_gallery',//parent slug
+        'photo_patients',//parent slug
         '', // 
         'Default Procedures', //
         'manage_options', // 
         'default_procedures', //  
         'default_procedures' // 
     );
+
+    add_submenu_page(
+        'photo_patients',//parent slug
+        '', // 
+        'Settings', //
+        'manage_options', // 
+        'gallery_settings', //  
+        'gallery_settings' // 
+    );
 }
-add_action('admin_menu', 'add_gallery_submenu');
+add_action('admin_menu', 'add_patients_submenu');
 
 // Template 
 
 function page_template( $template )
 {
-    if ( get_post_type( get_the_ID() ) == 'gallery' ) {
-            $template = plugin_dir_path(__FILE__) . '/custom-page-template.php';
+     
+    if(is_single(array('gallery'))){
+        $template = plugin_dir_path(__FILE__) . '/content.php';
+    }
+    if(is_singular('patients')){
+        $template = plugin_dir_path(__FILE__) . '/singular.php';   
+    }
+    
+    if(get_queried_object()->taxonomy === 'procedures'){
+        $template = plugin_dir_path(__FILE__) . '/content.php';   
     }
     return $template;
 }
 add_filter( 'template_include', 'page_template' );
 
-//Create shortcodes by category
-//[foobar]
-function foobar_func( $template ){
-    include_once plugin_dir_path(__FILE__).'/full-gallery.php';
+//[gallery_index]
+function gallery_index_func(){
+    require_once('gallery-index.php');
 }
-add_shortcode( 'foobar', 'foobar_func' );
-
+add_shortcode( 'gallery_index', 'gallery_index_func' );
 
 //url add new item
 function add_new_item() {
-    ?><script>window.location = "<?php echo admin_url('post-new.php?post_type=gallery'); ?>";</script><?php 
+    ?><script>window.location = "<?php echo admin_url('post-new.php?post_type=patients'); ?>";</script><?php 
 }
 
 //url add new item
 function procedures() {
     ?>
-    <script>window.location = "<?php echo admin_url('edit-tags.php?taxonomy=procedures&post_type=gallery'); ?>";</script>
+    <script>window.location = "<?php echo admin_url('edit-tags.php?taxonomy=procedures&post_type=patients'); ?>";</script>
     <?php
 }
 
 function default_procedures() {
     require_once('default_procedures.php');
 }
+function gallery_settings() {
+    require_once('settings.php');
+}
 
 //add taxonomies
 function type_taxonomies(){
     register_taxonomy(
         'procedures',
-        'gallery',
+        'patients',
         array(
             'hierarchical' => true,
             'label' => 'Procedures',
             'sort' => true,
             'args' => array('orderby' => 'term_order'),
-            'rewrite' => array('slug' => 'procedures')
-        ),
+            'rewrite' => array('slug' => 'procedures'),
+            'supports'          => array( 'title', 'editor', 'comments', 'thumbnail', 'custom-fields' )
+        )
     ); 
-    
 }
 add_action('init', 'type_taxonomies');
 // add submenu fields
-
-require_once('image-taxonomy.php');
+ $current_url =  explode('/',$_SERVER['REQUEST_URI']);
+ if(end($current_url) == 'edit-tags.php?taxonomy=procedures&post_type=patients'){
+    require_once('image-taxonomy.php');
+ }
 
 //add fields
 function add_custom_fields() {
-    $page = 'gallery';
+    $page = 'patients';
     $context = 'normal';
     $priority = 'high';
 
@@ -178,7 +252,7 @@ function case_details($post){
     //recover data from db to edit
     global $wpdb;
     $id = get_the_ID();
-    $result = $wpdb->get_results('SELECT * FROM post_gallery WHERE post_id ='.$id.'');
+    $result = $wpdb->get_results('SELECT * FROM patients_gallery WHERE post_id ='.$id.'');
     ?>
         <div class="custom-fields">
             <div class="custom-fields-title">
@@ -201,7 +275,7 @@ function surgeon($post){
     //recover data from db to edit
     global $wpdb;
     $id = get_the_ID();
-    $result = $wpdb->get_results('SELECT * FROM post_gallery WHERE post_id ='.$id.'');
+    $result = $wpdb->get_results('SELECT * FROM patients_gallery WHERE post_id ='.$id.'');
    
     ?>
         <div class="custom-fields">
@@ -212,7 +286,7 @@ function surgeon($post){
                 <input type="text" name="surgeon" id="surgeon" value="<?php echo $result[0]->surgeon ?>" />
             </div>
         </div>    
-        <p>If empty, surgeon name from Gallery Settings will display at front.</p>
+        <p>If empty, surgeon name from gallery Settings will display at front.</p>
     <?php
 
 }
@@ -220,7 +294,7 @@ function display_options($post){
     //recover data from db to edit
     global $wpdb;
     $id = get_the_ID();
-    $result = $wpdb->get_results('SELECT * FROM post_gallery WHERE post_id ='.$id.'');
+    $result = $wpdb->get_results('SELECT * FROM patients_gallery WHERE post_id ='.$id.'');
     
     ?>
         <div class="custom-fields">
@@ -246,7 +320,7 @@ function patient_information($post){
     //recover data from db to edit
     global $wpdb;
     $id = get_the_ID();
-    $result = $wpdb->get_results('SELECT * FROM post_gallery WHERE post_id ='.$id.'');
+    $result = $wpdb->get_results('SELECT * FROM patients_gallery WHERE post_id ='.$id.'');
     
     ?>
         <div class="custom-fields">
@@ -300,86 +374,56 @@ function patient_information($post){
 function patient_images($post){
     global $wpdb;
     $id = get_the_ID();
-    $result = $wpdb->get_results('SELECT * FROM post_gallery WHERE post_id ='.$id.'');
-    $images = $result[0]->images;
-    $arrayImages = explode(",", $images);
-    foreach ($arrayImages as $key => $value) {
-        $rowId[$key] = explode('*', $value);
-        $arrayClear[] = $rowId[$key][0];
-    }?>
-        <div class="gallery gallery-item-array">
-            <div class=" messages"></div>
-            <?php
-    if($images != ""){
-            $count = floor(count($rowId) / 2);
-            foreach ($arrayClear as $key => $value) { ?>
-                <?php if($value != null){ ?>
-                    <div class="gallery-item gallery-before">
-                        <H3><?php 
-                        if($key == 0 || $key%2 ==0){
-                        echo 'Before';
-                        }else{
-                            echo 'After';
-                        }  ?></H3>
-                        <div class="image-container">
-                            <img src="<?php echo $value ?>"   class="picture">
-                        </div>
-                        <div class="button-container">
-                            <input type="button" class="button updateImage" value="Update image"/>
-                            <input type="hidden" id="image_hidden-<?php echo $key; ?>" value = "<?php echo $value ?>" />
-                        </div>
-                    </div>
-                <?php }
+    $result = $wpdb->get_results('SELECT * FROM patients_gallery WHERE post_id ='.$id.'');
+    $images =  explode(',', $result[0]->images);
+
+    if (!empty($images) ) {
+        echo '<div class="select-files-button center">';
+            echo '<input type="button" class="button uploadImage" value="Add Files" />';
+        echo '</div>            ';
+        echo '<ul class="gallery-container">';
+            foreach ($images as $key => $image) {
+                if (!empty($image)) {
+                echo '<li class="gallery-item close-'.$key.'" id="'.$image.'" name="'.$image.'"  >';
+                    echo '<div class="image-container">';
+                        echo '<img src="'.$image.'" >';
+                        echo '<input type="hidden" value="'.$image.'"  class="gallery-item-url">';
+                    echo '</div>';
+                    
+                        echo '<input type="button" class="close-div" value="Remove Image" onclick="closeDiv('."'".$key."'".')"  id="close"/>';
+                    
+                echo '</li>';
+                }
             }
-    }else{ ?>
-            <div class="gallery-container">
-                <input type="button" class="close-div" value="x" onclick="closeDiv('close-div')"  id='close'/>
-                <div class="gallery-item gallery-before">
-                    <H3>Before</H3>
-                    <div class="image-container">
-                        <img src=""   class="picture" >
-                    </div>
-                    <div class="button-container">
-                        <input type="button" class="button uploadImage" value="Upload File" />
-                        <input type="hidden" class='profile_picture' value = "" />
-                    </div>
-                </div>
-                <div class="gallery-item gallery-after">
-                    <H3>After</H3>
-                    <div class="image-container">
-                        <img src=""   class="picture">
-                    </div>
-                    <div class="button-container">
-                        <input type="button" class="button uploadImage" value="Upload File" />
-                        <input type="hidden" class='profile_picture' value = "" />
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript" src="<?php plugins_url( '/inc/js/media_uploader.js', __FILE__ ) ?>"></script>
-    <?php 
-    } ?>
-        </div><!-- end gallery-->
-        <div class="new-row">
-            <input type="hidden" name="images" id="images" value="<?php echo $images ?>" />
-            <input type="button"  class="button button-secondary" id="new-row" name="new-row" value= "Add new row" onclick="addNewRow()">
-        </div>
-    <?php
+        echo '</ul>';
+        echo '<div id="resultado"></div>';
+        echo'<input type="hidden" name="images" id="images" value ="'.$result[0]->images.'">';
+    }else{    
+            echo'<div class="select-files-button center">';
+                echo'<input type="button" class="button uploadImage" value="Add Files" />';
+            echo'</div>            ';
+            echo'<ul class="gallery-container">';
+                echo'<input type="hidden" name="images" id="images" value ="">';
+            echo'</ul>';
+
+    }
 }
-add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 10, 2 );
+
 function your_custom_menu_item ( $items, $args ) {
     if (is_single() && $args->theme_location == 'primary') {
         $items .= '<li>Show whatever</li>';
     }
     return $items;
 }
+add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 10, 2 );
 
-//customize view all patients
+//customize view all gallery
 function custom_list_admin_patients($column){
     $columns = array(
         'cb' => '<input type="checkbox" / >',
-        'ID' => 'ID',
-        'feature_thumb'=> 'Photo',
         'title' => 'Title',
+        'feature_thumb'=> 'Photo',
+        'case_title' => 'Case Title',
         'case_notes' => 'Case Notes',
         'category' => 'Category',
         'author' => 'Author',
@@ -387,14 +431,14 @@ function custom_list_admin_patients($column){
     );
     return $columns;
 }
-add_filter('manage_edit-gallery_columns', 'custom_list_admin_patients');
+add_filter('manage_edit-patients_columns', 'custom_list_admin_patients');
 
 //send data to each field in view all patients
 
 function send_data($columns, $post_id){
     global $post;
     global $wpdb;
-    $result = $wpdb->get_results('SELECT * FROM post_gallery WHERE post_id ='.$post_id.'');
+    $result = $wpdb->get_results('SELECT * FROM patients_gallery WHERE post_id ='.$post_id.'');
     switch($columns){
         case 'feature_thumb':
             echo '<a href="'.get_edit_post_link().' " >';
@@ -418,7 +462,7 @@ function send_data($columns, $post_id){
     }
 
 }
-add_action('manage_gallery_posts_custom_column', 'send_data', 10, 2);
+add_action('manage_patients_posts_custom_column', 'send_data', 10, 2);
 // add procedures
 
 

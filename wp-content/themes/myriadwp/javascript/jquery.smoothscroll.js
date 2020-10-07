@@ -1,0 +1,6 @@
+// Plugin: jQuery.scrollSpeed
+// Source: github.com/nathco/jQuery.scrollSpeed
+// Author: Nathan Rutzky
+// Update: 1.0.2
+// Minified by Brankic1979
+!function(n){jQuery.scrollSpeed=function(o,i,t){var l,r,u,h=n(document),c=n(window),a=n("html, body"),d=t||"default",s=n(window).scrollTop(),f=!1;if(window.navigator.msPointerEnabled)return!1;c.on("mousewheel DOMMouseScroll",function(t){var n=t.originalEvent.wheelDeltaY,e=t.originalEvent.detail;return l=h.height()>c.height(),r=h.width()>c.width(),f=!0,l&&(u=c.height(),(n<0||0<e)&&(s=s+u>=h.height()?s:s+=o),(0<n||e<0)&&(s=s<=0?0:s-=o),a.stop().animate({scrollTop:s},i,d,function(){f=!1})),r&&(u=c.width(),(n<0||0<e)&&(s=s+u>=h.width()?s:s+=o),(0<n||e<0)&&(s=s<=0?0:s-=o),a.stop().animate({scrollLeft:s},i,d,function(){f=!1})),!1}).on("scroll",function(){l&&!f&&(s=c.scrollTop()),r&&!f&&(s=c.scrollLeft())}).on("resize",function(){l&&!f&&(u=c.height()),r&&!f&&(u=c.width())})},jQuery.easing.default=function(t,n,e,o,i){return-o*((n=n/i-1)*n*n*n-1)+e}}(jQuery);

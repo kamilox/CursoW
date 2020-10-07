@@ -1,5 +1,5 @@
 function addNewRow(){
-    $('<div class="gallery-container">'
+    jQuery('<div class="gallery-container">'
     +'<input type="button" class="close-div" value="x" onclick="closeDiv("close-div")"  id="close"/>'
     +'<div class="gallery-item gallery-before">'
     +'<H3>Before</H3>'
@@ -23,10 +23,10 @@ function addNewRow(){
     +'</div>'
     +'</div>').appendTo('.gallery');
 
-    $('.picture-new').css('opacity', '0');
+    jQuery('.picture-new').css('opacity', '1');
 
-    $('.uploadImage').click(function(){
-        var Img = $(this).parents().eq(0).siblings('div').children('img');
+    jQuery('.uploadImage').click(function(){
+        var Img = jQuery(this).parents().eq(0).siblings('div').children('img');
         var ImgRefence = Img.attr('src');
          var mediaUploader;
          if(mediaUploader){
@@ -59,13 +59,13 @@ function addNewRow(){
      //delete rows
     function closeDiv(className){
 
-        var close = $('.'+className).parents().eq(0).attr('id');
-        if($('#'+close).attr('id') != "id-1"){
-            $('#'+close).remove();
+        var close = jQuery('.'+className).parents().eq(0).attr('id');
+        if(jQuery('#'+close).attr('id') != "id-1"){
+            jQuery('#'+close).remove();
         }else{
-            $('.messages').addClass('error').html('Sorry you can´t delete this row');
+            jQuery('.messages').addClass('error').html('Sorry you can´t delete this row');
             setTimeout(function(){ 
-                $('.error').css({
+                jQuery('.error').css({
                     'height': '0',
                     'padding': '0',
                     'margin' : '0',
@@ -76,24 +76,26 @@ function addNewRow(){
         }
     }
     
-    var acum = $('#images').val(); 
+    var acum = jQuery('#images').val(); 
     function saveUrl(url, reference){;
         if(reference == ""){
             acum = acum + url + ',';
-            $('#images').val(acum);
+            jQuery('#images').val(acum);
         }else{
             var arraySave = acum.split(',');
             var indexId = arraySave.indexOf(reference);
             if(indexId != -1){
                 arraySave.splice(indexId,1, url);
                 acum = arraySave.join(',');
-                $('#images').val(acum);
+                jQuery('#images').val(acum);
             }
         }
-        var showButton = $('#images').val().split(',').length-1;
+        var showButton = jQuery('#images').val().split(',').length-1;
         if (showButton >= 2){
-            $('#new-row').attr('disabled', false);
+            jQuery('#new-row').attr('disabled', false);
         }
     }
 }
+ 
+
  

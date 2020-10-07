@@ -65,7 +65,7 @@ public function load_media() {
        <label for="procedures-image-id"><?php _e( 'Image', 'hero-theme' ); ?></label>
      </th>
      <td>
-       <?php $image_id = get_term_meta ( $term -> term_id, 'procedures-image-id', true ); ?>
+       <?php $image_id = get_term_meta ( $term ->term_id, 'procedures-image-id', true ); ?>
        <input type="hidden" id="procedures-image-id" name="procedures-image-id" value="<?php echo $image_id; ?>">
        <div id="procedures-image-wrapper">
          <?php if ( $image_id ) { ?>
@@ -98,22 +98,22 @@ public function load_media() {
  * Add script
  * @since 1.0.0
  */
- public function add_script() { ?>
+  public function add_script() { ?>
    <script>
      jQuery(document).ready( function($) {
        function ct_media_upload(button_class) {
          var _custom_media = true,
          _orig_send_attachment = wp.media.editor.send.attachment;
-         $('body').on('click', button_class, function(e) {
-           var button_id = '#'+$(this).attr('id');
+         jQuery('body').on('click', button_class, function(e) {
+           var button_id = '#'+jQuery(this).attr('id');
            var send_attachment_bkp = wp.media.editor.send.attachment;
-           var button = $(button_id);
+           var button = jQuery(button_id);
            _custom_media = true;
            wp.media.editor.send.attachment = function(props, attachment){
              if ( _custom_media ) {
-               $('#procedures-image-id').val(attachment.id);
-               $('#procedures-image-wrapper').html('<img class="custom_media_image" src="" style="margin:0;padding:0;max-height:100px;float:none;" />');
-               $('#procedures-image-wrapper .custom_media_image').attr('src',attachment.url).css('display','block');
+               jQuery('#procedures-image-id').val(attachment.id);
+               jQuery('#procedures-image-wrapper').html('<img class="custom_media_image" src="" style="margin:0;padding:0;max-height:100px;float:none;" />');
+               jQuery('#procedures-image-wrapper .custom_media_image').attr('src',attachment.url).css('display','block');
              } else {
                return _orig_send_attachment.apply( button_id, [props, attachment] );
              }
@@ -123,19 +123,19 @@ public function load_media() {
        });
      }
      ct_media_upload('.ct_tax_media_button.button'); 
-     $('body').on('click','.ct_tax_media_remove',function(){
-       $('#procedures-image-id').val('');
-       $('#procedures-image-wrapper').html('<img class="custom_media_image" src="" style="margin:0;padding:0;max-height:100px;float:none;" />');
+     jQuery('body').on('click','.ct_tax_media_remove',function(){
+       jQuery('#procedures-image-id').val('');
+       jQuery('#procedures-image-wrapper').html('<img class="custom_media_image" src="" style="margin:0;padding:0;max-height:100px;float:none;" />');
      });
      // Thanks: http://stackoverflow.com/questions/15281995/wordpress-create-procedures-ajax-response
-     $(document).ajaxComplete(function(event, xhr, settings) {
+     jQuery(document).ajaxComplete(function(event, xhr, settings) {
        var queryStringArr = settings.data.split('&');
        if( $.inArray('action=add-tag', queryStringArr) !== -1 ){
          var xml = xhr.responseXML;
-         $response = $(xml).find('term_id').text();
+         $response = jQuery(xml).find('term_id').text();
          if($response!=""){
            // Clear the thumb image
-           $('#procedures-image-wrapper').html('');
+           jQuery('#procedures-image-wrapper').html('');
          }
        }
      });

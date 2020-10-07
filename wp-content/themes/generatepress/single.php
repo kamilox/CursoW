@@ -14,6 +14,7 @@ get_header(); ?>
 	<div id="primary" <?php generate_do_element_classes( 'content' ); ?>>
 		<main id="main" <?php generate_do_element_classes( 'main' ); ?>>
 			<?php
+			echo '<h1>aqhui es single</h1>';
 			/**
 			 * generate_before_main_content hook.
 			 *
