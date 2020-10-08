@@ -76,7 +76,7 @@
 }
 .procedures-item a:hover{
     font-weight: 400;
-    text-shadow: 0 0 2px #f1592a;
+    text-shadow: 0 0 2px #f0f0f0;
 }
 .gallery{
     width: 100%;
