@@ -68,8 +68,7 @@ require_once('inc/bd.php');
 
 function styles(){
     wp_enqueue_style('parent-style',  plugins_url( '/inc/css/style.css', __FILE__ ) );
-    //wp_enqueue_style('colorpicker',  plugins_url( '/inc/plugins-supports/css/colorpicker.css', __FILE__ ) );
-    // Only include jquery core
+    wp_enqueue_media();
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-ui-core');
     wp_enqueue_script( 'jquery-ui-sortable');
@@ -233,6 +232,9 @@ add_action('init', 'type_taxonomies');
  if(end($current_url) == 'edit-tags.php?taxonomy=procedures&post_type=patients'){
     require_once('image-taxonomy.php');
  }
+
+
+
 
 //add fields
 function add_custom_fields() {

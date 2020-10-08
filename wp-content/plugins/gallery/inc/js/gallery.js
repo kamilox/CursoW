@@ -2,131 +2,106 @@ jQuery(document).ready(function(){
 // Gallery carousel
 	var srcImage = "";
 	jQuery('.gallery-carousel-item img').click(function(){
-	    var srcImage = jQuery(this).attr('src');
-	    //console.log(srcImage);
-	    jQuery('.gallery-image-master img').attr('src', '');
-	    jQuery('.gallery-image-master img').attr('srcset', '');
-	    jQuery('.gallery-image-master img').attr('src', srcImage);
-	    jQuery('.gallery-image-master img').attr('srcset', srcImage);
+    var srcImage = jQuery(this).attr('src');
+    jQuery('.gallery-image-master img').attr('src', '');
+    jQuery('.gallery-image-master img').attr('srcset', '');
+    jQuery('.gallery-image-master img').attr('src', srcImage);
+    jQuery('.gallery-image-master img').attr('srcset', srcImage);
 	});
 
 	//upload Image
 	jQuery('.uploadImage').click(function(){
-       var Img = jQuery(this).parents().eq(0).siblings('div').children('img');
-       //console.log(Img);
-       var images = [];
-       var ImgRefence = Img.attr('src');
-        var mediaUploader;
-        if(mediaUploader){
-            mediaUploader.open();
-            return;
-        }
-        
-        mediaUploader = wp.media.frames.file_frames = wp.media({
-            title: 'Upload picture',
-                button: {
-                    text: 'Choose picture'
-                },
-                multiple: true
-            });
-
-            mediaUploader.on('select', function(){
-                var uploaded_images = mediaUploader.state().get('selection');
-                var attachment_ids = uploaded_images.map( function( attachment ) {
-                    attachment = attachment.toJSON();
-                    jQuery(
-                            '<li class="gallery-item close-'+ attachment.id+'" id="'+ attachment.url+'">'
-                                +'<div class="image-container">'
-                                    +'<img src="'+ attachment.url+'"   class="picture-new">'
-                                    +'<input type="hidden" value="'+ attachment.url+'"  class="gallery-item-url">'
-                                +'</div>'
-                                +'<div class="button-close-container">'
-                                    +'<input type="button" class="close-div" value="Remove Image" onclick="closeDiv('+"'"+attachment.id+"'"+')"  id="close"/>'
-                                +'</div>'
-                            +'</li>').appendTo('.gallery-container');
-                }).join();
-                var url_images = [];
-
-                for (var i = uploaded_images.toJSON().length - 1; i >= 0; i--) {
-                    url_images += (uploaded_images.toJSON()[i].url)+',';
-                }
-                jQuery('#images').val(url_images);
-            });
-            
-            mediaUploader.open();
+    var Img = jQuery(this).parents().eq(0).siblings('div').children('img');
+    //console.log(Img);
+    var images = [];
+    var ImgRefence = Img.attr('src');
+    var mediaUploader;
+    if(mediaUploader){
+        mediaUploader.open();
+        return;
+    }
+      
+  mediaUploader = wp.media.frames.file_frames = wp.media({
+      title: 'Upload picture',
+          button: {
+              text: 'Choose picture'
+          },
+          multiple: true
   });
 
-  // upload image settings
-   jQuery('#load-logo').click(function(){
-       var Img = jQuery(this).parents().eq(0).siblings('div').children('img');
-       console.log(Img);
-       var images = [];
-       var ImgRefence = Img.attr('src');
-        var mediaUploader;
-        if(mediaUploader){
-            mediaUploader.open();
-            return;
-        }
-        
-        mediaUploader = wp.media.frames.file_frames = wp.media({
-            title: 'Upload picture',
-                button: {
-                    text: 'Choose picture'
-                },
-                multiple: false
-            });
+  mediaUploader.on('select', function(){
+    var uploaded_images = mediaUploader.state().get('selection');
+    var attachment_ids = uploaded_images.map( function( attachment ) {
+        attachment = attachment.toJSON();
+        jQuery(
+                '<li class="gallery-item close-'+ attachment.id+'" id="'+ attachment.url+'">'
+                    +'<div class="image-container">'
+                        +'<img src="'+ attachment.url+'"   class="picture-new">'
+                        +'<input type="hidden" value="'+ attachment.url+'"  class="gallery-item-url">'
+                    +'</div>'
+                    +'<div class="button-close-container">'
+                        +'<input type="button" class="close-div" value="Remove Image" onclick="closeDiv('+"'"+attachment.id+"'"+')"  id="close"/>'
+                    +'</div>'
+                +'</li>').appendTo('.gallery-container');
+    }).join();
+    var url_images = [];
 
-            mediaUploader.on('select', function(){
-                var uploaded_images = mediaUploader.state().get('selection');
-                var attachment_ids = uploaded_images.map( function( attachment ) {
-                    attachment = attachment.toJSON();
-                    jQuery(
-                            '<li class="gallery-item close-'+ attachment.id+'" id="'+ attachment.url+'">'
-                                +'<div class="image-container">'
-                                    +'<img src="'+ attachment.url+'"   class="picture-new">'
-                                    +'<input type="hidden" value="'+ attachment.url+'"  class="gallery-item-url">'
-                                +'</div>'
-                                +'<div class="button-close-container">'
-                                    +'<input type="button" class="close-div" value="Remove Image" onclick="closeDiv('+"'"+attachment.id+"'"+')"  id="close"/>'
-                                +'</div>'
-                            +'</li>').appendTo('.patient-detail-image-header-info-logo');
-                }).join();
-                var url_images = [];
+    for (var i = uploaded_images.toJSON().length - 1; i >= 0; i--) {
+              url_images += (uploaded_images.toJSON()[i].url)+',';
+          }
+          jQuery('#images').val(url_images);
+    });
+    mediaUploader.open();
+  });
 
-                for (var i = uploaded_images.toJSON().length - 1; i >= 0; i--) {
-                    url_images += (uploaded_images.toJSON()[i].url)+',';
-                }
-                jQuery('#images').val(url_images);
-            });
-            
-            mediaUploader.open();
+  var mediaUploader;
+   // upload image settings
+  jQuery('.load-logo').click(function(e) {
+    e.preventDefault();
+    if(mediaUploader){
+      mediaUploader.open();
+      return;
+    }   
+    mediaUploader = wp.media.frames.file_frames = wp.media({
+        title: 'Upload picture',
+            button: {
+                text: 'Choose picture'
+            },
+            multiple: false
     });
 
-    var urlGallery      = window.location.pathname.split('/');     // Returns full URL (https://example.com/path/example.html)
-    //console.log(urlGallery[urlGallery.length - 2]);
-    // Load the sortable actions for move the images
-    if (urlGallery[urlGallery.length - 2] == "wp-admin") {
-        jQuery('.gallery-container').sortable({
-          update : function(event, ui) {
-            jQuery('#resultado').html('');
-            jQuery('#resultado').append(ui.item.parent().attr('id')+",");
-            jQuery('#resultado').append(ui.item.parent().sortable('toArray')+",");
-            var arrayResult = jQuery('#resultado').html();
-            var clearArray = arrayResult.split(',').reverse();
-            var imgArray = [];
-            for (var i = clearArray.length - 1; i >= 0; i--) {
-                if (clearArray[i] != "undefined") {
-                    imgArray += clearArray[i]+',';
-                }
-            }
-            jQuery('#images').val(imgArray);
+    mediaUploader.on('select', function() {
+      attachment = mediaUploader.state().get('selection').first().toJSON();
+      jQuery('.patient-detail-image-header-info-logo img').attr('src',attachment.url);
+      jQuery('.gallery-patients-image img').attr('src',attachment.url);
+      
+    });
+    mediaUploader.open();
+  });
+
+  var urlGallery      = window.location.pathname.split('/');  
+  if (urlGallery[urlGallery.length - 2] == "wp-admin") {
+      jQuery('.gallery-container').sortable({
+        update : function(event, ui) {
+          jQuery('#resultado').html('');
+          jQuery('#resultado').append(ui.item.parent().attr('id')+",");
+          jQuery('#resultado').append(ui.item.parent().sortable('toArray')+",");
+          var arrayResult = jQuery('#resultado').html();
+          var clearArray = arrayResult.split(',').reverse();
+          var imgArray = [];
+          for (var i = clearArray.length - 1; i >= 0; i--) {
+              if (clearArray[i] != "undefined") {
+                  imgArray += clearArray[i]+',';
+              }
           }
-        });
-    }
+          jQuery('#images').val(imgArray);
+        }
+      });
+  }
 
-    //add_procedures
+  //add_procedures
 
-    var sensitiveCheck = getCookie('sensitive_check');
+  var sensitiveCheck = getCookie('sensitive_check');
 	
 	jQuery('#sensitive-material-proceed').click(function(){
 			setCookie('sensitive_check', 'true', 7);
@@ -275,10 +250,9 @@ jQuery(document).ready(function(){
                                       'transition' : 'background 0.5s'
                                         });
           }
-       
-      });
+  });
         /*display de bmi- calculator when the page load completely*/
-        jQuery('.loader').css('display', 'none');
+  jQuery('.loader').css('display', 'none');
         
         jQuery('#bmi-button-clear').click(function(){
              jQuery('#weight-user').val(0);
@@ -313,148 +287,12 @@ jQuery(document).ready(function(){
                                   'box-shadow': 'none',
                                   'transition' : 'background 0.5s'
                                     });
-   
-      });
-    
-      /*end bmi-calculator*/
+  });
+  /*end bmi-calculator*/
 
-      jQuery('.glsr-button').click(function() {
-        location.reload();
-    });
-
-    //Color picker
-    jQuery('#title_color').iris({
-      width: 250, // the width in pixel
-      hide: false, // hide the color picker by default
-      palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
-    });
-
-    jQuery('.title-settings .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
-      jQuery('#procedure_title_color').val(jQuery('#title_color').val());
-      jQuery('#title-color-settings').css('background', jQuery('#title_color').val() );
-      jQuery('#procedure_title_color-settings').css('color', jQuery('#title_color').val() );
-      
-    });
-
-    jQuery('.title-settings .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
-      jQuery('#procedure_title_color').val(jQuery('#title_color').val());
-      jQuery('#title-color-settings').css('background', jQuery('#title_color').val() );
-      jQuery('#procedure_title_color-settings').css('color', jQuery('#title_color').val() );
-    });
-
-    //Buttom primary colors settings
-
-    jQuery('#primary_button_color').iris({
-      width: 250, // the width in pixel
-      hide: false, // hide the color picker by default
-      palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
-    });
-
-    jQuery('.primary-button-background .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
-      jQuery('#primary_button_background_color').val(jQuery('#primary_button_color').val());
-      jQuery('#primary-button-background').css('background', jQuery('#primary_button_color').val() );
-      jQuery('.btn-primary-settings').css('background', jQuery('#primary_button_color').val() );
-      
-    });
-
-    jQuery('.primary-button-background .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
-      jQuery('#primary_button_background_color').val(jQuery('#primary_button_color').val());
-      jQuery('#primary-button-background').css('background', jQuery('#primary_button_color').val() );
-      jQuery('.btn-primary-settings').css('background', jQuery('#primary_button_color').val() );
-    });
-
-
-    jQuery('#primary_button_color_border').iris({
-      width: 250, // the width in pixel
-      hide: false, // hide the color picker by default
-      palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
-    });
-
-    jQuery('.primary-button-border .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
-      jQuery('#primary_button_border_color').val(jQuery('#primary_button_color_border').val());
-      jQuery('#primary-button-border').css('background', jQuery('#primary_button_color_border').val() );
-      jQuery('.btn-primary-settings').css('border-color', jQuery('#primary_button_color_border').val() );
-    });
-
-    jQuery('.primary-button-border .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
-      jQuery('#primary_button_border_color').val(jQuery('#primary_button_color_border').val());
-      jQuery('#primary-button-border').css('background', jQuery('#primary_button_color_border').val() );
-      jQuery('.btn-primary-settings').css('border-color', jQuery('#primary_button_color_border').val() );
-    });
-
-    jQuery('#primary_button_color_font').iris({
-      width: 250, // the width in pixel
-      hide: false, // hide the color picker by default
-      palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
-    });
-
-    jQuery('.primary-button-font-color .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
-      jQuery('#primary_button_font_color').val(jQuery('#primary_button_color_font').val());
-      jQuery('#primary-button-font-color').css('background', jQuery('#primary_button_color_font').val() );
-      jQuery('.btn-primary-settings').css('color', jQuery('#primary_button_color_font').val() );
-      
-    });
-
-    jQuery('.primary-button-font-color .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
-      jQuery('#primary_button_font_color').val(jQuery('#primary_button_color_font').val());
-      jQuery('#primary-button-font-color').css('background', jQuery('#primary_button_color_font').val() );
-      jQuery('.btn-primary-settings').css('color', jQuery('#primary_button_color_font').val() );
-    });
-
-    jQuery('#secondary_button_color').iris({
-      width: 250, // the width in pixel
-      hide: false, // hide the color picker by default
-      palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
-    });
-
-    jQuery('.secondary-button-background .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
-      jQuery('#secondary_button_background_color').val(jQuery('#secondary_button_color').val());
-      jQuery('#secondary-button-background').css('background', jQuery('#secondary_button_color').val() );
-      jQuery('.btn-secondary-settings').css('background', jQuery('#secondary_button_color').val() );
-    });
-
-    jQuery('.secondary-button-background .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
-      jQuery('#secondary_button_background_color').val(jQuery('#secondary_button_color').val());
-      jQuery('#secondary-button-background').css('background', jQuery('#secondary_button_color').val() );
-      jQuery('.btn-secondary-settings').css('background', jQuery('#secondary_button_color').val() );
-    });
-
-    jQuery('#secondary_button_color_border').iris({
-      width: 250, // the width in pixel
-      hide: false, // hide the color picker by default
-      palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
-    });
-
-    jQuery('.secondary-button-border .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
-      jQuery('#secondary_button_border_color').val(jQuery('#secondary_button_color_border').val());
-      jQuery('#secondary-button-border').css('background', jQuery('#secondary_button_color_border').val() );
-      jQuery('.btn-secondary-settings').css('border-color', jQuery('#secondary_button_color_border').val() );
-    });
-
-    jQuery('.secondary-button-border .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
-      jQuery('#secondary_button_border_color').val(jQuery('#secondary_button_color_border').val());
-      jQuery('#secondary-button-border').css('background', jQuery('#secondary_button_color_border').val() );
-      jQuery('.btn-secondary-settings').css('border-color', jQuery('#secondary_button_color_border').val() );
-    });
-
-    jQuery('#secondary_button_color_font').iris({
-      width: 250, // the width in pixel
-      hide: false, // hide the color picker by default
-      palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
-    });
-
-    jQuery('.secondary-button-font-color .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
-      jQuery('#secondary_button_font_color').val(jQuery('#secondary_button_color_font').val());
-      jQuery('#secondary-button-font-color').css('background', jQuery('#secondary_button_color_font').val() );
-      jQuery('.btn-secondary-settings').css('color', jQuery('#secondary_button_color_font').val() );
-    });
-
-    jQuery('.secondary-button-font-color .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
-      jQuery('#secondary_button_font_color').val(jQuery('#secondary_button_color_font').val());
-      jQuery('#secondary-button-font-color').css('background', jQuery('#secondary_button_color_font').val() );
-      jQuery('.btn-secondary-settings').css('color', jQuery('#secondary_button_color_font').val() );
-    });
-    
+  jQuery('.glsr-button').click(function() {
+      location.reload();
+  });
     
 });
 

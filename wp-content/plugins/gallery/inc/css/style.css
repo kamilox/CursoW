@@ -181,14 +181,14 @@
 }
 .patient-detail-buttom a,
 .btn-primary{
-    fill: #ff5300;
-    color: #ff5300;
-    border-color: #ff5300;   
+    fill: #ababab;
+    color: #ababab !important;
+    border-color: #ababab;   
 }
 
 .patient-detail-buttom a:hover{
-    background: #ff5300;
-    color: #fff;
+    background: #d8d8d8;
+    color: #fff !important;
     transition: background 0.5s, color 0.5s;
 }
 .patients-excerpt {
@@ -204,26 +204,25 @@
     text-decoration: none;
     font-weight: 500;
 }
-.patients-excerpt a:hover {
-    background: #ff5300;
-    color: #fff;
-    transition: background 0.5s, color 0.5s;
-}
+
+.patients-excerpt a:hover,
 .btn-primary:hover{
-    background: #ff5300;
-    color: #fff;
-    transition: background 0.5s, color 0.5s;
+    background: #d8d8d8;
+    color: #fff !important;
+    border-color: #777777;
+    transition: background 0.5s, color 0.5s, border-color 0.5s;
 }
 .btn-secondary:hover{
-    background: #000;
-    color: #fff;
-    transition: background 0.5s, color 0.5s;
+    background: #777777;
+    color: #fff !important;
+    border-color: #d8d8d8;
+    transition: background 0.5s, color 0.5s, border-color 0.5s;
 }
 
 .btn-secondary{
-    fill: #000000;
-    color: #000000;
-    border-color: #000000;
+    fill: #777777;
+    color: #777777 !important;
+    border-color: #777777;
 }
 .patient-detail-contact {
     text-align: center;
@@ -360,7 +359,7 @@ img.patients-settings-logo {
     height: 30px;
     margin: 5px 10px;
     border: solid 1px #808080;
-    background: #3ec0b1;
+    background: #0c0c0c;
 }
 .colors-settings-col {
     display: flex;
@@ -414,6 +413,10 @@ img.patients-settings-logo {
     font-weight: 600;
     text-align: center;
     width: 100%;
+    min-height: 80px;
+}
+.patient-detail-excerpt {
+    padding: 20px;
 }
 .patient-detail-images {
 margin: auto;
@@ -430,6 +433,9 @@ flex-direction: row;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.image-gallery-content{
+    position: relative;
 }
 .image-gallery-item {
     width: 100%;
@@ -532,17 +538,33 @@ flex-direction: row;
 .patient-detail-image-header-info-description {
     height: 20px;
     max-height: 20px;
-    width: 145px;
-    max-width: 145px;
+    width: 100%;
+    max-width: 140px;
     position: relative;
-    z-index: 999999;
+    z-index: 10;
     bottom: 35px;
+    left: 10px;
+}
+.patient-detail-image-header-info-description-content{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 100%;
+    max-width: 120px;
+}
+.patient-detail-image-header-info-description-content .patient-detail-image-header-info-logo{
+    right: -5px;
 }
 .patient-detail-image-header-info-title {
     font-size: 12px;
-    color: #ff5300;
+    color: #333;
     margin-left: 10px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #f1592a, 0 0 80px #f1592a, 0 0 90px #f1592a, 0 0 100px #f1592a, 0 0 140px #f1592a, 0 0 180px #f1592a;
+    opacity: .3;
+}
+.patient-detail-image-header-info-title-content{
+    font-size: 10px;
+    color: #f0f0f0;
+    margin-left: 10px;
 }
 .patient-detail-image-header-info-logo .custom-logo-link img {
     right: 10px;
@@ -555,6 +577,7 @@ flex-direction: row;
     position: absolute;
     right: 0px;
     bottom: 0px;
+    max-height: 35px;
 }
 .patient-detail-image-carousel-item-settings .patient-detail-image-header-info-description,
 .patient-detail-image-carousel-item .patient-detail-image-header-info-description{

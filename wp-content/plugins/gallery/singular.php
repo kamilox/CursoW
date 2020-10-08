@@ -3,13 +3,12 @@
 *	Template Name: Single patients
 *
 */
-
 get_header();
 global $wp, $wpdb, $post;
 $id = get_the_ID();
-
 $result = $wpdb->get_results('SELECT * FROM patients_gallery WHERE post_id ='.$id.'');
 $images = explode(',', $result[0]->images);
+$settings = $wpdb->get_results('SELECT * FROM patients_settings ORDER BY id DESC LIMIT 1');
 ?>
 <body>
     <div class="container">
@@ -19,17 +18,39 @@ $images = explode(',', $result[0]->images);
             	<div class="pd-20 col-6 col-6-responsive">
             		<div class="navigator">
 		                <?php 
-		                	$prev = get_previous_post_link( '%link', '<span class="btn-primary">' .     
+		                	$prev = get_previous_post_link( '%link', '<span class="btn-primary"
+		                													style="
+											    								background:'.$settings[0]->primary_button_background_color.';
+											    								border-color: '.$settings[0]->primary_button_border_color.';
+											    								color: '.$settings[0]->primary_button_font_color.';
+										    								">' .     
 		                    _x( '< Previous', 'Previous post link','category' ,TRUE ) . '</span>' ); ?>
 		                    <?php if ($prev) : ?>
 		                    <div class="nav-previous"><?php echo $prev ?></div>
 		                    <?php endif; ?>
 
 		                    <div class="nav-next">
-		                        <a href="https://xsculpt.com/gallery-procedures/" name="btn-gallery" id="btn-gallery" class="btn-secondary">Gallery</a>
+		                        <a 	href="https://xsculpt.com/gallery-procedures/" 
+		                        	name="btn-gallery" 
+		                        	id="btn-gallery" 
+		                        	class="btn-secondary"
+		                        	style="
+    								background:<?php echo $settings[0]->secondary_button_background_color ?>;
+    								border-color: <?php echo $settings[0]->secondary_button_border_color ?>;
+    								color: <?php echo $settings[0]->secondary_button_font_color ?>;
+								">
+		                        	Gallery
+		                        </a>
 		                    </div>
 
-		                    <?php $next = get_next_post_link( '%link', '<span class="btn-primary">' . _x( 'Next > ', 'Next post link', 'category',TRUE ) . '</span>' ); ?>
+		                    <?php $next = get_next_post_link( '%link', '<span class="btn-primary"
+		                    												style="
+											    								background:'.$settings[0]->primary_button_background_color.';
+											    								border-color: '.$settings[0]->primary_button_border_color.';
+											    								color: '.$settings[0]->primary_button_font_color.';
+										    								"
+		                    											>'. 
+							 _x( 'Next > ', 'Next post link', 'category',TRUE ) . '</span>' ); ?>
 		                    <?php if ($next) : ?>
 		                    <div class="nav-next"><?php echo $next ?> </div>
 		                    <?php endif; ?>
@@ -41,7 +62,15 @@ $images = explode(',', $result[0]->images);
 	    				<?php echo $post->post_content ?> 
 	    			</div>
 	    			<div class="patient-detail-contact">
-	    				<a href="/contact-us" class="btn-primary">Contact Us</a> 
+	    				<a 	href="/contact-us" 
+	    					class="btn-primary"
+	    					style="
+    								background:<?php echo $settings[0]->primary_button_background_color ?>;
+    								border-color: <?php echo $settings[0]->primary_button_border_color ?>;
+    								color: <?php echo $settings[0]->primary_button_font_color ?>;
+								">
+							Contact Us
+						</a> 
 	    			</div>
 	    		</div>
 	    		<!-- images -->
@@ -65,7 +94,7 @@ $images = explode(',', $result[0]->images);
 		    									<?php echo get_bloginfo() ?>
 		    								</div>
 		    								<div class="patient-detail-image-header-info-logo">
-		    									<?php echo get_custom_logo(); ?>
+		    									<?php  ?>
 		    								</div>
 	    								</div>
 	    								

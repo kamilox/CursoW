@@ -18,7 +18,7 @@
 				</div>
 				<div class="col-12">
 					<div class="gallery-patients-button col-12">
-						<input id="load-logo" type="button" class="button" value="Select Image" />
+						<input id="load-logo" type="button" class="button load-logo" value="Select Image" />
 						<div class="center width-100 relative pd-20">
 		    				Please select the image from the library
 		    		</div>
@@ -34,21 +34,9 @@
 					<label>Procedure title color</label>
 				</div>
 				<div class="col-12 colors-settings-col title-settings">
-					<div class="color-settings" id="title-color-settings" style="background: <?php 
-																if(empty($settings[0]->procedure_title_color)){
-						    										echo '#3ec0b1';
-						    									}else{
-						    										echo $settings[0]->procedure_title_color;
-						    									}?>"></div>
+					<div class="color-settings" id="title-color-settings" style="background: <?php echo $settings[0]->procedure_title_color ?>"></div>
 					<input type="hidden" id="procedure_title_color" name="procedure_title_color" class="gallery-patients-input" value="">
-					<input type="hidden" id="title_color" value="
-															<?php 
-																if(empty($settings[0]->procedure_title_color)){
-						    										echo '#3ec0b1';
-						    									}else{
-						    										echo $settings[0]->procedure_title_color;
-						    									}?> " 
-						    									>
+					<input type="hidden" id="title_color" value="<?php echo $settings[0]->procedure_title_color ?>">
 				</div>
 			</div>
 			<div class="input-form-gallery-patients">
@@ -89,7 +77,7 @@
 				</div>
 				<div class="col-12 colors-settings-col primary-button-font-color">
 					<div class="color-settings" id="primary-button-font-color"></div>
-					<input type="hidden" id="primary_button_font_color" name="primary_button_font_color" class="gallery-patients-input" value="<?php echo $settings[0]->primary_button_font_color?>">
+					<input type="hidden" id="primary_button_font_color" name="primary_button_font_color" class="gallery-patients-input" value="<?php echo $settings[0]->primary_button_font_color ?>">
 					<input type="hidden" id="primary_button_color_font" value="<?php echo $settings[0]->primary_button_font_color?>" >
 				</div>
 			</div>
@@ -222,7 +210,7 @@
 									>
 									<div class="patient-detail-image-header-info-description">
 	    								<div class="patient-detail-image-header-info-title">
-	    									Website's title
+	    									<?php echo get_bloginfo() ?>
 	    								</div>
 	    								<div class="patient-detail-image-header-info-logo">
 	    									<img src="<?php echo plugins_url( '/inc/img/logo-wordpress.png', __FILE__) ?>" class="patient-detail-info-logo">
@@ -247,7 +235,7 @@
 									>
 									<div class="patient-detail-image-header-info-description">
 	    								<div class="patient-detail-image-header-info-title">
-	    									Website's title
+	    									<?php echo get_bloginfo() ?>
 	    								</div>
 	    								<div class="patient-detail-image-header-info-logo">
 	    									<img src="<?php echo plugins_url( '/inc/img/logo-wordpress.png', __FILE__) ?>" class="patient-detail-info-logo">
@@ -260,7 +248,7 @@
 									<img src="<?php echo plugins_url( '/inc/img/female-before.png', __FILE__) ?>">
 									<div class="patient-detail-image-header-info-description">
 	    								<div class="patient-detail-image-header-info-title">
-	    									Website's title
+	    									<?php echo get_bloginfo() ?>
 	    								</div>
 									</div>
 									<div class="patient-detail-image-counter">
@@ -271,7 +259,7 @@
 									<img src="<?php echo plugins_url( '/inc/img/female-after.png', __FILE__) ?>">
 									<div class="patient-detail-image-header-info-description">
 	    								<div class="patient-detail-image-header-info-title">
-	    									Website's title
+	    									<?php echo get_bloginfo() ?>
 	    								</div>
 									</div>
 									<div class="patient-detail-image-counter">
@@ -282,7 +270,7 @@
 									<img src="<?php echo plugins_url( '/inc/img/male-before.png', __FILE__) ?>">
 									<div class="patient-detail-image-header-info-description">
 	    								<div class="patient-detail-image-header-info-title">
-	    									Website's title
+	    									<?php echo get_bloginfo() ?>
 	    								</div>
 									</div>
 									<div class="patient-detail-image-counter">
@@ -293,7 +281,7 @@
 									<img src="<?php echo plugins_url( '/inc/img/male-after.png', __FILE__) ?>">
 									<div class="patient-detail-image-header-info-description">
 	    								<div class="patient-detail-image-header-info-title">
-	    									Website's title
+	    									<?php echo get_bloginfo() ?>
 	    								</div>
 									</div>
 									<div class="patient-detail-image-counter">
@@ -306,14 +294,154 @@
 	            </div>
 	        </div>
     	</div>
+    	<div class="center width-100 pd-20 relative">
+			<form action="<?php echo plugins_url( '/delete-settings.php', __FILE__ ) ?>" method="get">
+				<div class="restore default values">
+					<h3><?php echo _x('Restore values default', get_current_theme() ); ?></h3>
+					<input type="hidden" name="url" id="url" value="<?php echo add_query_arg( $wp->query_vars ); ?>">
+					
+				</div>
+			  	<input type="submit" value="Submit">
+			</form>
+		</div>
 	</div>
+
 </div>
 
 <script type="text/javascript">
 	jQuery('document').ready(function(){
+
+		jQuery('#title_color').iris({
+			width: 250, // the width in pixel
+			hide: false, // hide the color picker by default
+			palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
+		});
+
+		jQuery('.title-settings .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
+			jQuery('#procedure_title_color').val(jQuery('#title_color').val());
+			jQuery('#title-color-settings').css('background', jQuery('#title_color').val() );
+			jQuery('#procedure_title_color-settings').css('color', jQuery('#title_color').val() );
 		
+		});
+
+		jQuery('.title-settings .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
+			jQuery('#procedure_title_color').val(jQuery('#title_color').val());
+			jQuery('#title-color-settings').css('background', jQuery('#title_color').val() );
+			jQuery('#procedure_title_color-settings').css('color', jQuery('#title_color').val() );
+		});
+
+		//Buttom primary colors settings
+
+		jQuery('#primary_button_color').iris({
+			width: 250, // the width in pixel
+			hide: false, // hide the color picker by default
+			palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
+		});
+
+		jQuery('.primary-button-background .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
+			jQuery('#primary_button_background_color').val(jQuery('#primary_button_color').val());
+			jQuery('#primary-button-background').css('background', jQuery('#primary_button_color').val() );
+			jQuery('.btn-primary-settings').css('background', jQuery('#primary_button_color').val() );
+			
+		});
+
+		jQuery('.primary-button-background .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
+			jQuery('#primary_button_background_color').val(jQuery('#primary_button_color').val());
+			jQuery('#primary-button-background').css('background', jQuery('#primary_button_color').val() );
+			jQuery('.btn-primary-settings').css('background', jQuery('#primary_button_color').val() );
+		});
 
 
+		jQuery('#primary_button_color_border').iris({
+			width: 250, // the width in pixel
+			hide: false, // hide the color picker by default
+			palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
+		});
+
+		jQuery('.primary-button-border .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
+			jQuery('#primary_button_border_color').val(jQuery('#primary_button_color_border').val());
+			jQuery('#primary-button-border').css('background', jQuery('#primary_button_color_border').val() );
+			jQuery('.btn-primary-settings').css('border-color', jQuery('#primary_button_color_border').val() );
+		});
+
+		jQuery('.primary-button-border .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
+			jQuery('#primary_button_border_color').val(jQuery('#primary_button_color_border').val());
+			jQuery('#primary-button-border').css('background', jQuery('#primary_button_color_border').val() );
+			jQuery('.btn-primary-settings').css('border-color', jQuery('#primary_button_color_border').val() );
+		});
+
+		jQuery('#primary_button_color_font').iris({
+			width: 250, // the width in pixel
+			hide: false, // hide the color picker by default
+			palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
+		});
+
+		jQuery('.primary-button-font-color .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
+			jQuery('#primary_button_font_color').val(jQuery('#primary_button_color_font').val());
+			jQuery('#primary-button-font-color').css('background', jQuery('#primary_button_color_font').val() );
+			jQuery('.btn-primary-settings').css('color', jQuery('#primary_button_color_font').val() );
+			
+		});
+
+		jQuery('.primary-button-font-color .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
+			jQuery('#primary_button_font_color').val(jQuery('#primary_button_color_font').val());
+			jQuery('#primary-button-font-color').css('background', jQuery('#primary_button_color_font').val() );
+			jQuery('.btn-primary-settings').css('color', jQuery('#primary_button_color_font').val() );
+		});
+
+		jQuery('#secondary_button_color').iris({
+			width: 250, // the width in pixel
+			hide: false, // hide the color picker by default
+			palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
+		});
+
+		jQuery('.secondary-button-background .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
+			jQuery('#secondary_button_background_color').val(jQuery('#secondary_button_color').val());
+			jQuery('#secondary-button-background').css('background', jQuery('#secondary_button_color').val() );
+			jQuery('.btn-secondary-settings').css('background', jQuery('#secondary_button_color').val() );
+		});
+
+		jQuery('.secondary-button-background .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
+			jQuery('#secondary_button_background_color').val(jQuery('#secondary_button_color').val());
+			jQuery('#secondary-button-background').css('background', jQuery('#secondary_button_color').val() );
+			jQuery('.btn-secondary-settings').css('background', jQuery('#secondary_button_color').val() );
+		});
+
+		jQuery('#secondary_button_color_border').iris({
+			width: 250, // the width in pixel
+			hide: false, // hide the color picker by default
+			palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
+		});
+
+		jQuery('.secondary-button-border .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
+			jQuery('#secondary_button_border_color').val(jQuery('#secondary_button_color_border').val());
+			jQuery('#secondary-button-border').css('background', jQuery('#secondary_button_color_border').val() );
+			jQuery('.btn-secondary-settings').css('border-color', jQuery('#secondary_button_color_border').val() );
+		});
+
+		jQuery('.secondary-button-border .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
+			jQuery('#secondary_button_border_color').val(jQuery('#secondary_button_color_border').val());
+			jQuery('#secondary-button-border').css('background', jQuery('#secondary_button_color_border').val() );
+			jQuery('.btn-secondary-settings').css('border-color', jQuery('#secondary_button_color_border').val() );
+		});
+
+		jQuery('#secondary_button_color_font').iris({
+			width: 250, // the width in pixel
+			hide: false, // hide the color picker by default
+			palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'] // custom palette
+		});
+
+		jQuery('.secondary-button-font-color .iris-picker .iris-picker-inner .iris-square .iris-square-value .iris-square-handle').mousemove(function(e){
+			jQuery('#secondary_button_font_color').val(jQuery('#secondary_button_color_font').val());
+			jQuery('#secondary-button-font-color').css('background', jQuery('#secondary_button_color_font').val() );
+			jQuery('.btn-secondary-settings').css('color', jQuery('#secondary_button_color_font').val() );
+		});
+
+		jQuery('.secondary-button-font-color .iris-picker .iris-picker-inner .iris-slider .iris-slider-offset .ui-slider-handle').mousemove(function(e){
+			jQuery('#secondary_button_font_color').val(jQuery('#secondary_button_color_font').val());
+			jQuery('#secondary-button-font-color').css('background', jQuery('#secondary_button_color_font').val() );
+			jQuery('.btn-secondary-settings').css('color', jQuery('#secondary_button_color_font').val() );
+		});
 	});
 </script>
 
